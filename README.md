@@ -4,37 +4,32 @@ Esse repositório vai acompanhar vocês até o final do curso, para mantermos a 
 
 ```
 .
-├── semana-0
+├── quinzena-1
 │   ├── aula1
-│   ├── aula2
-│   └── projeto-nome
-|
-├── semana-1
+│   ├── aula2
 │   ├── aula3
 │   ├── aula4
+│   └── projeto-nome
+|
+├── quinzena-2
 │   ├── aula5
 │   ├── aula6
-│   └── projeto-nome
-|
-├── semana-2
 │   ├── aula7
 │   ├── aula8
+│   └── projeto-nome
+|
+├── quinzena-3
 │   ├── aula9
 │   ├── aula10
-│   └── projeto-nome
-|
-├── semana-3
 │   ├── aula11
 │   ├── aula12
-│   ├── aula13
-│   ├── aula14
 │   └── projeto-nome
 |
-├── semana-4
+├── quinzena-4
+│   ├── aula13
+│   ├── aula14
 │   ├── aula15
 │   ├── aula16
-│   ├── aula17
-│   ├── aula18
 │   └── projeto-nome
 |
 ```
