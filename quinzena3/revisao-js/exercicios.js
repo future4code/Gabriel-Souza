@@ -96,10 +96,21 @@ const e = !(booleano1) && !(booleano3) || (!booleano4 && booleano3 && booleano3)
 // EXERCÍCIO 07
 function retornaNNumerosPares(n) {
 
-  // Incompleto
+ let arrayPar = [];
 
+ for ( let i = 0;  arrayPar.length < n ; i++) {
 
-}
+  if (i % 2 === 0){
+    arrayPar.push(i);
+
+    };
+
+ };
+
+ return arrayPar;
+    
+};
+
 
 // EXERCÍCIO 08
 function checaTriangulo(a, b, c) {
@@ -162,24 +173,24 @@ return objeto;
 
 // EXERCÍCIO 10
 function segundoMaiorEMenor(array) {
-
-  // Imcompleto
   
  let newArray = [];
 
-for (let i = 0; i < array.length; i++) {
+ let segundoMaior = array.sort((a, b) => {
 
-  let a = array[array.length - 2];
-  let b = array[array.length - 6];
+  return a - b
+ })[1];
 
-  newArray.push(a)
-  newArray.push(b)
+ let segundoMenor = array.sort((a, b) => {
 
-  break;
-}
-return newArray;
+  return b - a
+ })[1];
 
-}
+ newArray.push(segundoMenor, segundoMaior);
+
+ return  newArray;
+
+};
 
 
 // EXERCÍCIO 11
