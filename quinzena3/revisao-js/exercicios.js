@@ -394,42 +394,73 @@ return arrayOrdenado;
 // EXERCÍCIO 19B
 function ordenaPorData(consultasData) {
 
+  // Fiz esse codigo na mão copiando pra enteder a lógica. Mais na verdade não intendi foi quase nada o código esta bem confuso pra mim.
+
+  for(let i = 0; i < consultasData.length; i++) {
+    for(let j = 0; j < consultasData.length - i - 1; j++) {
+
+      const arrayData1 = consultasData[j].dataDaConsulta.split('/');
+      const dia1 = Number(arrayData1[0]);
+      const mes1 = Number(arrayData1[1]);
+      const ano1 = Number(arrayData1[2]);
+
+      const arrayData2 = consultasData[j + 1].dataDaConsulta.split('/');
+      const dia2 = Number(arrayData2[0]);
+      const mes2 = Number(arrayData2[1]);
+      const ano2 = Number(arrayData2[2]);
+
+      const data1 = new Date(ano1, mes1 -1, dia1).getTime();
+      const data2 = new Date(ano2, mes2-1, dia2).getTime();
+
+      if(data1 > data2) {
+        const temp = consultasData[j];
+        consultasData[j] = consultasData[j + 1];
+        consultasData[j + 1] = temp;
+      };
+    };
+  };
+  return consultasData;
 
 
-let ac = [...consultasData]
+/*
 
-// Incompleto
+Já tentei de diversas forma mais e impossivel acessar o objeto dentro do array. (consultasDatas.Data)
 
- ac.sort(function(a,b) { 
-    return a.dataDaConsulta.getTime() - b.dataDaConsulta.getTime() 
+  let consultas = [
+    { nome: "João", dataDaConsulta:new Date  ("01/10/2021") },
+    { nome: "Pedro", dataDaConsulta:new Date ("02/07/2021") },
+    { nome: "Paula", dataDaConsulta: new Date ("03/11/2021") },
+    { nome: "Márcia",  dataDaConsulta: new Date ("04/05/2021") }
+  ]
 
+  consultas.sort ((a,b) => {
+
+    return a.dataDaConsulta.getTime() - b.dataDaConsulta.getTime()
   })
 
-  return ac
+  return consultas
+*/
 
 }
 
 // EXERCÍCIO 20
 function calculaSaldo(contas) {
 
-  // Icompleto
+// Codigo copiado da lista de resolução de exercicios. Por que não conseguir fazer só.
 
-let a = contas.map((valores)=> {
-  return valores.compras
-})
+  contas.forEach((conta) => {
 
-let b = contas.map((subT)=> {
+    let totalDeCompras = 0
 
-  return subT.saldoTotal
-})
+    conta.compras.forEach((valor) => {
 
-a.forEach(funcao)
-function funcao(item, index, array) {
+      totalDeCompras += valor
 
-  return array[index]  = item / a
-}
+    });
+    conta.saldoTotal -= totalDeCompras
 
-console.log(a)
-return a
+  });
 
-}
+  return contas;
+
+};
