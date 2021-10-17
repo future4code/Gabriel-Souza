@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Adicionar Produto</title>
+    <link rel="stylesheet" type="text/css" href="add-produto.css">
+
+    <title>adicionarvinho</title>
+
 </head>
+
 <body>
-    <div>
-        <p>Nome da lojinha</p>
+
+<!-- Nome da loja -->
+    <div class="withe">
+        <p>Loja de  Vinhos Importados</p>
     </div>
-    
+
+    <!-- Links para as paginas -->
     <div>
         <a href="index.html">Página Inicial</a>
         <a href="ctrl-estoque.html">Controle de Estoque</a>
@@ -19,31 +26,37 @@
     </div>
 
     
-    <h2>Adicionar Produto</h2>
+    <h2>Adicione seu Vinho</h2>
     <form action="">
-        <div>
+
+        <!-- Link foto -->
+        <div class="none">
             <label for="link-foto">Link para foto: </label>
             <input type="url" id="link-foto" name="link-foto">
         </div>
-        
-        <div>
-            <label for="descricao">Descrição do produto: </label>
+
+        <!-- Descricção -->
+        <div class="mm">
+            <label for="descricao">Nome do vinho: </label>
             <!-- Adicione o id apropriado para o input abaixo -->
             <input type="text" id="descrição" name="descrição">
         </div>
-        
-        <div>
+
+        <!-- Preço -->
+        <div class="mm">
             <label for="preco">Preço (em R$): </label>
             <!-- Adicione o id apropriado e o type para receber números abaixo -->
             <input type="number" id="preço" name="preço">
         </div>
-        
-        <div>
+
+        <!--Quantidade disponível -->
+        <div class="mm">
             <!-- Preencha as propriedades necessárias para os elementos abaixo -->
-            <label for="Quantidade disponível">Quantidade disponível da fruta</label> </label>
+            <label for="Quantidade disponível">Quantidade disponível de vinhos:</label> </label>
             <input type="number" id="Quantidade disponível" nome="Quantidade disponível">
         </div>
 
+       <!-- Botão -->
         <div class="form-add">
             <!-- Adicione ao type do botão abaixo o valor para que ele submeta o formulário -->
             <button type="submit">Adicionar</button>
@@ -52,4 +65,5 @@
     </form>
 
 </body>
+
 </html>

@@ -1,0 +1,56 @@
+body{
+    background-image:  url(../imagens/ark13.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+.cor-letra{
+    color:white;
+}
+
+p{
+    color:white;
+}
+
+h1{
+    color:white;
+}
+
+.inline{
+    display: inline-block;
+}
+
+a{
+    color: rgb(57, 57, 236);
+    background-color:rgb(250, 68, 68);
+    
+}
+
+#red{
+    color: rgb(250, 68, 68);
+}
+
+div{
+    font-size: 20px;
+}
+
+.m{
+    font-size: 14px;
+    margin-bottom: -14px;
+    padding-left:40% ;
+    padding-top: 18%;
+}
+
+.i{
+    margin-top:-15px;
+    padding-left: 2px;
+}
+
+.center{
+    margin-left: 26%;
+}
+
+.cc{
+    margin-left: 31%;
+}
+
