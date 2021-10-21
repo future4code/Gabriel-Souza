@@ -4,10 +4,14 @@
   *
   **/
 
+  /* Modificando o font-familu para a font "Roboto" */
 * {
     margin: 0;
     padding: 0;
+    font-family: "Roboto";
+    font-weight: 700;
 }
+
 
 h2 {
     background-color: #fe7e02;
