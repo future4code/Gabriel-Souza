@@ -45,6 +45,7 @@ div img {
     font-size: 20px;
     color: white;
 }
+
 /* Movendo Botão para o centro */
 .mover{
     margin-top: 15px;
@@ -77,6 +78,12 @@ div img {
 
 #container-de-descricao>ol {
     padding: 15px 0px;
+}
+
+/* Distanciando o <p> do cabeçalho */
+#container-de-descricao>p{
+    display: inline-block;
+    margin-top: 20px;
 }
 
 #container-para-comprar {
