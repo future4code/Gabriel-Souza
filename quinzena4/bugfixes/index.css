@@ -80,10 +80,12 @@ div img {
     padding: 15px 0px;
 }
 
-/* Distanciando o <p> do cabeçalho */
+/* 1 - Distanciando o <p> do cabeçalho */
+/* 2 - Alinhando o texto */
 #container-de-descricao>p{
     display: inline-block;
     margin-top: 20px;
+    width: 185px;
 }
 
 #container-para-comprar {
