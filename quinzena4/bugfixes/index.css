@@ -33,8 +33,9 @@ div>p:first-child {
     display: inline;
 }
 
-div img {
-    background: black;
+/* alterando a cor de fundo para branca e o tamanho da img */
+div .img-diminuir {
+    width:50px;
 }
 
 .botao-amarelo {
