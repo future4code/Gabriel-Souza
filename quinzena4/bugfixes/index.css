@@ -76,6 +76,14 @@ div .img-diminuir {
     height: 15px;
     width:20px;
 }
+/* Efeito lupa-hover */
+div > .icone:hover{
+    background-color:rgb(216, 214, 214);
+}
+/* Efeito lupa-active */
+div > .icone:active {
+    background-color:#fadf63;
+}
 
 
 /** 
