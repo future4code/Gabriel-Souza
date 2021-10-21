@@ -16,9 +16,14 @@ h2 {
     text-align: center;
 }
 
+/* Modificando as bordas */
 input {
     height: 20px;
     width: 500px;
+    border-bottom: white;
+    border-right: white;
+    border-left: white;
+    border-top: solid;
 }
 
 button:focus {
@@ -115,6 +120,7 @@ div:last-child {
 
 table {
     width: 60%;
+    padding-left: 12%;
 }
 
 td button {
