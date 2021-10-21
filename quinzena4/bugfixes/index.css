@@ -145,7 +145,21 @@ td button {
     background-color: #635a3d
 }
 
+/* Botando :active fundo branco */
+#back-button:active{
+    background-color:white;
+}
+
 /* Centralizando <table> */
 div > .table-center{
     margin: auto;
+}
+
+/* Botando efeito nos botões com :hover e :active */
+div > table  .button-efeito:hover{
+    background-color:#f1c70a;
+}
+
+div > table  .button-efeito:active{
+    background-color:white;
 }
