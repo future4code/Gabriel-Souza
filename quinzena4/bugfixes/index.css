@@ -58,7 +58,8 @@ div .img-diminuir {
 
 /* Movendo Botão para o centro */
 .mover{
-    margin-top: 15px;
+    margin-top: 145px;
+    margin-left: -15px;
 }
 
 .botao-amarelo:hover {
@@ -173,3 +174,13 @@ div > table  .button-efeito:hover{
 div > table  .button-efeito:active{
     background-color:white;
 }
+
+/* Ajustando o posicionamento */
+.centralizar-botão-voutar > a {
+    margin:47%;
+}
+
+.centralizar-botão-voutar{
+    margin-top:100px;
+}
+
