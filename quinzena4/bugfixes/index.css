@@ -45,6 +45,10 @@ div img {
     font-size: 20px;
     color: white;
 }
+/* Movendo Botão para o centro */
+.mover{
+    margin-top: 15px;
+}
 
 .botao-amarelo:hover {
     background-color: #c44f00;
