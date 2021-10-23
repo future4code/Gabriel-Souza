@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color:mediumvioletred;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height:50px
+}
+
+header > h1{
+    margin-right: 85%;
+    margin-bottom:-4px ;
+}
+
+
+header > div img{
+    height: 30px;
+    margin-left: 10px;
+}
+
+header > button{
+    margin-right: 20px;
+    height: 30px;
+    width: 70px;
+}
+
+/*llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll*/
+
+.container {
+    display:grid;
+    grid-template-columns: 1fr 1fr 5fr 1fr ;
+    grid-template-rows: 70vh ;
+    
+}
+
+
+.container > .menu,.img,.paragrafo,.box4{
+    background: #bdbdbd;
+    border: 2px solid #333;
+    padding:10px;
+}
+
+.container > .menu{
+    grid-row: 1/200;
+    background-color:#f2d0e0 ;
+    color:black;
+}
+
+.container > .menu nav ul{
+    list-style: none;
+    margin-bottom: -35px;
+    margin-left: 50px;
+}
+.container > .menu nav ul li{
+    margin-top:50px;
+}
+
+.container > .paragrafo{
+    grid-column: 1/5;
+    background-color:mediumvioletred
+}
+.container > .paragrafo p{
+    text-align: center;
+    font-size:20px;
+    margin-right: 6%;
+}
+
+.container > .img{
+    grid-row: 1/200 ;
+    grid-column:2/5 ;
+}
+
+.container > .menu nav ul img{
+    height:25px;
+    width: 25px;
+    margin-bottom: -73px;
+    margin-left: -47px;
+}
+
+.container > .img {
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap ;
+    background-color:white
+
+}
+
+.container > .img .border-color{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-right:7px solid #cacac7;
+    border-bottom:7px solid#cacac7;
+    
+}
+
+.container > .img .border-color .img-bolo-diminui{
+    height:50vh;
+    width:50vh;
+}
+
+.container > .img .border-color h1{
+    padding-bottom:20px;
+    text-align: center;
+}
+
+.container > .img .border-color p{
+    text-align: center;
+}
+
+.container > .img .border-color :nth-child(3){
+    text-align: center;
+
+}
+
+.container > .menu  footer  nav  ul  .ceta{
+    margin-bottom: -74px;
+    margin-left: 140px;
+}
+
