@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-flow: wrap;
+    border-bottom: 3px solid red;
+    height: 50px;
+}
+
+header > nav .fundo-red{
+    display:inline-block;
+    margin-right: 40px;
+    border-style: outset;
+    background-color: rgb(243, 92, 92);
+    height: 25px;
+    width: 100px;
+    padding-top: 5px;
+}
+
+header > nav .fundo-red a{
+    text-align: center;
+    color:white
+}
+
+header > nav{
+    list-style: none;
+    font-size:17px
+}
+
+header > nav .fundo-red:hover{
+    background-color:rgb(245, 101, 101);
+    font-size: 18px;
+}
+
+header > nav .fundo-red a:active{
+    color:red
+}
+
+.h2{
+    margin-left: 42vw;
+    font-size:20px
+}
+
+/* lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll */
+
+.form-1{
+    width: 50%;
+    height: 21vw;
+    margin: 0 auto;
+    margin-top:125px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 1px 5px 3px red;
+    height: 20vw;
+    
+}
+
+label{
+    margin-bottom:5px;
+    padding-top: 20px;
+}
+
+input, textarea{
+    margin-bottom:5px;
+    padding-bottom: 3px;
+    width:40%;
+    box-shadow:5px 5px 5px black;
+    font-weight: bold;
+}
+
+textarea{
+    padding-bottom: 50px;
+}
+
+button{
+    margin-top: 10px;
+    width:10%;
+    height:30px;
+}
+
+input, textarea :hover{
+    box-shadow:1px 1px 5px red;
+    font-size: 15px;
+}
+
+#b-red:hover{
+    background-color: rgb(250, 100, 100);
+}
+
+#b-red:active{
+    background-color: greenyellow;
+    font-size: 19px;
+}
+
+/* llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll */
+
+footer{
+    display: flex;
+    background-color:rgb(243, 92, 92);
+    margin-top: 28vh;
+    height:20px;
+    align-items: center;
+    justify-content:center;
+}
