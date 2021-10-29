@@ -1,0 +1,194 @@
+/** 
+  *
+  *  ESTILOS GERAIS 
+  *
+  **/
+
+  /* Modificando o font-familu para a font "Roboto" */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+    font-weight: 700;
+}
+
+
+h2 {
+    background-color: #fe7e02;
+    padding: 10px 5px 10px 5px;
+    color: white;
+    text-align: center;
+}
+
+/* Modificando as bordas */
+input {
+    height: 20px;
+    width: 500px;
+    border-bottom: white;
+    border-right: white;
+    border-left: white;
+    border-top: solid;
+}
+
+button:focus {
+    color: white;
+}
+
+img {
+    width: 100px;
+}
+
+div>p:first-child {
+    display: inline;
+}
+
+/* alterando a cor de fundo para branca e o tamanho da img */
+div .img-diminuir {
+    width:50px;
+}
+
+.botao-amarelo {
+    background-color: #ffaf43;
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+}
+
+/* Movendo Botão para o centro */
+.mover{
+    margin-top: 145px;
+    margin-left: -15px;
+}
+
+.botao-amarelo:hover {
+    background-color: #c44f00;
+}
+
+.container {
+    height: 500px;
+    text-align: center;
+}
+
+/* alterando o tamanho da img-lupa */
+.icone {
+    height: 15px;
+    width:20px;
+}
+/* Efeito lupa-hover */
+div > .icone:hover{
+    background-color:rgb(216, 214, 214);
+}
+/* Efeito lupa-active */
+div > .icone:active {
+    background-color:#fadf63;
+}
+
+
+/** 
+  *
+  *  ESTILOS HOME 
+  *
+  **/
+
+#container-de-descricao {
+    background-color: #2274a5;
+    color: white;
+}
+
+#container-de-descricao>ol {
+    padding: 15px 0px;
+}
+
+/* 1 - Distanciando o <p> do cabeçalho */
+/* 2 - Alinhando o texto */
+#container-de-descricao>p{
+    display: inline-block;
+    margin-top: 20px;
+    width: 185px;
+}
+
+#container-para-comprar {
+    background-color: #e7eb90;
+}
+
+#container-para-comprar>p {
+    color: #c44f00;
+    padding: 100px 0;
+    font-size: 60px;
+}
+
+
+/**
+  *
+  *  ESTILOS COMPRAR 
+  *
+  **/
+
+div:nth-child(2),
+div:last-child {
+    text-align: center;
+}
+
+table {
+    width: 60%;
+    padding-left: 12%;
+}
+
+td button {
+    background-color: #fadf63;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    color: black;
+}
+
+.container-do-search {
+    margin-top: 20px;
+    height: 100px;
+}
+
+
+#back-button {
+    background-color: white;
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 10px;
+    color: black;
+}
+
+#back-button:hover {
+    background-color: #635a3d
+}
+
+/* Botando :active fundo branco */
+#back-button:active{
+    background-color:white;
+}
+
+/* Centralizando <table> */
+div > .table-center{
+    margin: auto;
+}
+
+/* Botando efeito nos botões com :hover e :active */
+div > table  .button-efeito:hover{
+    background-color:#f1c70a;
+}
+
+div > table  .button-efeito:active{
+    background-color:white;
+}
+
+/* Ajustando o posicionamento */
+.centralizar-botão-voutar > a {
+    margin:47%;
+}
+
+.centralizar-botão-voutar{
+    margin-top:100px;
+}
+
