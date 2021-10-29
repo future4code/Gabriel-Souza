@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-flow: wrap;
+    border-bottom: 3px solid red;
+    height: 70px;
+}
+
+header > nav .fundo-red{
+    display:inline-block;
+    margin-right: 40px;
+    border-style: outset;
+    background-color: rgb(243, 92, 92);
+    height: 40px;
+    width: 100px;
+    padding-top: 0px;
+}
+
+header > nav .fundo-red a{
+    text-align: center;
+    color:white
+}
+
+header > nav{
+    list-style: none;
+    font-size:13px
+}
+
+header > nav .fundo-red:hover{
+    background-color:rgb(245, 101, 101);
+    font-size: 18px;
+}
+
+header > nav .fundo-red a:active{
+    color:red
+}
+
+.h2{
+    margin-left: 42vw;
+    font-size:20px
+}
+
+/* llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll */
+
+.container {
+    height: 106em;
+    width: 100em;
+    margin:20vh auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-1, .item-2, .item-3{
+    height: 35em;
+    width: 100em;
+}
+
+/* lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll */
+
+.item-1, .item-2, .item-3{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-1 , .card-2, .card-3{
+    height:35em;
+    width:100em;
+    display:flex;
+    flex-direction:column;
+}
+
+.img-i{
+    height:34em;
+    width: 49em;
+    align-self: center;
+    margin:auto ;
+
+}
+
+.h1-i, .h3-i{
+    align-self:center;
+    text-align: center;
+    margin: 2em;
+}
+
+a{
+    align-self:center;
+    margin:3em;
+}
+
+a:hover{
+    font-size: 17px;
+}
+
+a:active{
+    background-color:greenyellow;
+    border-radius: 5px;
+}
+
+footer{
+    display: flex;
+    background-color:rgb(243, 92, 92);
+    margin-top: 50px;
+    height:20px;
+    align-items: center;
+    justify-content:center;
+}

@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* HEADER */
+
+header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-flow: wrap;
+    border-bottom: 3px solid red;
+}
+
+header > nav .fundo-red{
+    display:inline-block;
+    margin-right: 40px;
+    border-style: outset;
+    background-color: rgb(243, 92, 92);
+    height: 25px;
+    width: 100px;
+    padding-top: 5px;
+}
+
+header > nav .fundo-red a{
+    text-align: center;
+    color:white
+}
+
+header > nav{
+    list-style: none;
+    font-size:17px
+}
+
+header > nav .fundo-red:hover{
+    background-color:rgb(245, 101, 101);
+    font-size: 18px;
+}
+
+header > nav .fundo-red a:active{
+    color:red
+}
+
+/* llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll */
+
+main{
+    display:flex;
+    flex-flow: wrap;
+    justify-content: center;
+
+    
+}
+
+.image img{
+    height: 600px;
+    margin-left: 200px;
+}
+
+    .image{
+        margin-top: 80px;
+        border-end-end-radius: 1px;
+    }
+
+.my{
+    order:-1;
+    width: 500px;
+    text-align: center;
+    padding-top: 275px;
+}
+
+.my h3{
+    width: 10px;
+}
+
+.my h1{
+    height:90px;
+    margin-top:-10px;
+}
+
+/* llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll */
+
+.habilidade{
+    margin-left: 215px;
+    margin-top: 20px;
+}
+
+.titulo{
+    display: inline;
+    margin-left: 445px;
+}
+
+/* lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll */
+
+.lista-contato{
+    margin-left: 404px;
+    margin-top: -38px;
+
+}
+
+.lista-contato  > a img:hover{
+    border: solid 3px red;
+}
+
+.titulo-1{
+    display: inline-block;
+    margin-left: 445px;
+    margin-bottom: 55px;
+    padding-top: 20px;
+}
+
+/* llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll */
+
+.titulo-2{
+    display: inline-block;
+    margin-left: 413px;
+    margin-bottom: 55px;
+    padding-top: 20px;
+}
+
+.ensino{
+height:95px;
+margin-left: 408px;
+ margin-top: -40px;
+}
+
+.ensino img{
+    height: 80px;
+    
+}
+
+footer{
+    display: flex;
+    background-color:rgb(243, 92, 92);
+    margin-top: 50px;
+    height:20px;
+    align-items: center;
+    justify-content:center;
+}
+
+/* llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll */
+
