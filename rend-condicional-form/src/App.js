@@ -1,47 +1,59 @@
 import React from "react";
 
 // Imports Pages
-    import DadosGerais from "./pages/Dados-Gerais"
-    import Informacoes from "./pages/Informacoes";
-    import InformacoesAdicionais from "./pages/Info-Adicionais";
-    import FinalMemssage from "./pages/Final";
+ import DadosGerais from "./pages/Dados-Gerais";
+ import Informacoes from "./pages/Informacoes";
+ import InformacoesAdicionais from "./pages/Info-Adicionais";
+ import Final from "./pages/Final";
 // ----------------------------------------------------------------
 
 // StyleGlobal Import
-    import StyledGlobal from "./styles/StyleGlobal"
+    import StyledGlobal from "./styles/StyleGlobal";
 //----------------------------------------------------------------
 class App extends React.Component {
 
   state = {
-    pages: ""
-  }
+    etapaContador: 1
+  };
 
-  ProximasEtapas = () => {
+  contador = () => {
+    this.setState({etapaContador: this.state.etapaContador + 1})
+  };
 
-    this.setState({pages: this.state.pages})
+  proximasEtapas = () => {
+
+    switch (this.state.etapaContador){
+
+      case 1:
+        return <DadosGerais />;
+
+      case 2:
+        return <Informacoes />;
+
+      case 3:
+        return <InformacoesAdicionais />;
+
+        default:
+
+    }
   };
 
   render() {
-
 
 
      return (
 
         <div>
 
-          <section>
+              <section>
+                
+              {this.proximasEtapas()}
 
-             <DadosGerais />
-             {/* <Informacoes /> */}
-             {/* <InformacoesAdicionais /> */}
-             {/* <FinalMemssage /> */}
-
-             <div>
-               <button>Proxíma etapa</button>
-             </div>
-             
-
-          </section>
+            {
+                this.state.etapaContador < 4 ?  ( <button onClick={this.contador}>Próxima etapa</button> )  :  ( <Final /> )
+            }
+  
+              </section>
           
             <StyledGlobal />
         </div>

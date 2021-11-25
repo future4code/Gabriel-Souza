@@ -1,5 +1,10 @@
 import React from 'react'
 
+// Imports
+import InformacoesAdicionais from './Info-Adicionais';
+
+//----------------------------------------------------------------
+
 // Styles
     import styled from "styled-components";
 //----------------------------------------------------------------
@@ -30,7 +35,7 @@ import React from 'react'
 //----------------------------------------------------------------
 
 class Informacoes extends React.Component {
-
+   
     render() {
 
         return(
@@ -52,7 +57,7 @@ class Informacoes extends React.Component {
                     </Divs>
 
                 </FormInfo>
-
+              
             </div>
 
         )

@@ -41,12 +41,12 @@ class InformacoesAdicionais extends React.Component {
 
                     <Divs>
                         <p>5. Por que você não terminou um curso de graduação?</p>
-                        <input type="text" />
+                        <input type="text" placeholder="Opcional" />
                     </Divs>
 
                     <Divs>
                         <p>6. Você fez algum curso complementar?</p>
-                        <input type="text" />
+                        <input type="text" placeholder="Opcional" />
                     </Divs>
 
                     <Divs>

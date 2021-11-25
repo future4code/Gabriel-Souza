@@ -1,12 +1,13 @@
 import React from "react";
 
-import MenuEnsinoScroll from "../components/MenuEnsinoScroll"
+// Imports from
+//----------------------------------------------------------------
 
 // Styles
 import styled from "styled-components";
 //----------------------------------------------------------------
 
-    const FormGerais = styled.form`
+    const FormInicial = styled.form`
     
         display: flex;
         flex-direction: column;
@@ -47,7 +48,7 @@ class DadosGerais extends React.Component {
                     
                 <h1>ETAPA 1 - DADOS GERAIS</h1>
 
-                <FormGerais action="">
+                <FormInicial action="">
 
                     <Divs>
                         <p>1.Qual é o seu nome?</p>
@@ -73,8 +74,8 @@ class DadosGerais extends React.Component {
                             <option>Ensino superior incompleto</option>
                         </select>
                     </Divs>
-
-                </FormGerais>
+                        
+                </FormInicial>
 
             </div>
 
