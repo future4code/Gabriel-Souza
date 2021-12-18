@@ -1,8 +1,7 @@
 import React from "react";
 
 // Imports Gerais
-import AdicionarPlaylist from "./components/adicionar-musicas/AdicionarPlaylist";
-import CriarPlaylist from "./components/criar-playlist/CriarPlaylist";
+import AdicionarPlaylist from "./components/adicionar-playlist/AdicionarPlaylist";
 import VisualizarPlaylist from "./components/visualizar-playlist/VisualizarPlaylist";
 //----------------------------------------------------------------
 
@@ -14,15 +13,10 @@ class App extends React.Component {
 
   state = {
     button1: false,
-    button2: false,
   };
 
   button1  = () => {
-    this.setState({button1: !this.state.button1 });
-  };
-
-  button2  = () => {
-    this.setState({button2: !this.state.button2 });
+    this.setState({button1: !this.state.button1});
   };
 
   render () {
@@ -30,13 +24,6 @@ class App extends React.Component {
     const setButton1 = () => {
 
       if(this.state.button1){
-        return <CriarPlaylist />
-      };
-    };
-
-    const setButton2 = () => {
-
-      if(this.state.button2){
         return <VisualizarPlaylist />
       };
     };
@@ -50,14 +37,13 @@ class App extends React.Component {
           </div>
 
           <div className="button-move">
-            <button onClick={this.button1}>Adicionar Musicas</button>
-          </div>
-          <div className="button-move">
-            <button onClick={this.button2}>Vizualizar Playlist</button>
+            {
+              this.state.button1 ? (<button onClick={this.button1}>Fechar playlist</button>)
+              : (<button onClick={this.button1}>Vizualizar Playlist</button>)
+             }
           </div>
 
           {setButton1()}
-          {setButton2()}
 
         <GlobalStyle />
       </div>

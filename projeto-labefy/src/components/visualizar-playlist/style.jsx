@@ -12,3 +12,7 @@ export const Style = styled.div`
         height: 12px;
     }
 `
+
+export const StyleRenderList = styled.div`
+
+`

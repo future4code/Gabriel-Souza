@@ -2,6 +2,7 @@ import React from "react";
 
 // Imports Gerais
 import axios from "axios";
+import RenderDetalhes from "./RenderDetalhes";
 // ----------------------------------------------------------------
 
 // Import Style
@@ -12,12 +13,11 @@ class VisualizarPlaylist extends React.Component {
 
     state = {
         playlist: [],
-        listDetalhes: []
-    }
-
+    };
+    
     componentDidMount () {
-        this.pegarPlaylist()
-    }
+        this.pegarPlaylist();
+    };
 
     pegarPlaylist = async () => {
 
@@ -50,38 +50,26 @@ class VisualizarPlaylist extends React.Component {
         });
     };
 
-    detalhesDaPlaylist = (id) => {
-
-        axios.get(`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks/${id}`,
-        {
-            headers: { Authorization: "gabriel-silva-joy"} 
-        })
-        .then(res => {
-            console.log(res.data.result.tracks);
-        })
-        .catch(err => {
-            
-        })
-    }
-
     render () {
 
         const mostrarList = this.state.playlist.map((list) => {
             return (
-                <div>
-                    <p key={list.id}>{list.name}
-                    <button onClick={() => this.detalhesDaPlaylist(list.id)}>Detalhes</button>
-                    {/* <button onClick={() => this.excluirPlaylist(list.id)}><img src="imagens/lixeira_318-55452.jpg" alt="oi" /></button> */}
-                    </p>
+                <div key={list.id}>
+
+                    <li key={list.id}>{list.name}
+                          <RenderDetalhes idProps={list.id} />
+                         <button onClick={() => this.excluirPlaylist(list.id)}><img src="imagens/lixeira_318-55452.jpg" alt="lixeira" /></button>
+                    </li>
+                    
                 </div>
             );
-        });
+        })
 
         return (
 
             <Style>
-                <h2>Playlists</h2>
-                {mostrarList}
+                <h2>Suas Playlists</h2>
+                { this.state.playlist.length ? (mostrarList) : (<p>Carregando playlists ...</p>)}
                 <hr />
             </Style>
         )

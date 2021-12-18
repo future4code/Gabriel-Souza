@@ -26,6 +26,7 @@ class AdicionarPlaylist extends React.Component {
         })
         .then( res => {
             alert("Playlist adicionada")
+            this.setState({inputValue: ""})
         })
         .catch( err  => {
             if(this.state.inputValue.length){
