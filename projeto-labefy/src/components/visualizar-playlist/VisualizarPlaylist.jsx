@@ -32,7 +32,7 @@ class VisualizarPlaylist extends React.Component {
             this.setState({playlist: res.data.result.list})
 
         } catch (err) {
-            console.log(err.data)
+            alert("Erro ao carregar playlist :(")
         }
     };
 
@@ -46,7 +46,7 @@ class VisualizarPlaylist extends React.Component {
             this.pegarPlaylist()
         })
         .catch(err => {
-            alert("Erro ao excluir á Playlist!")
+            alert("Erro ao excluir á Playlist :(")
         });
     };
 
@@ -54,23 +54,25 @@ class VisualizarPlaylist extends React.Component {
 
         const mostrarList = this.state.playlist.map((list) => {
             return (
-                <div key={list.id}>
 
-                    <li key={list.id}>{list.name}
-                          <RenderDetalhes idProps={list.id} />
-                         <button onClick={() => this.excluirPlaylist(list.id)}><img src="imagens/lixeira_318-55452.jpg" alt="lixeira" /></button>
+                <Style key={list.id}>
+
+                    <li key={list.id}>
+                        {list.name}
+                        <img    onClick={() => this.excluirPlaylist(list.id)}
+                            src="imagens/delete.png" alt="lixeira" />
+                         <RenderDetalhes idProps={list.id} />
                     </li>
                     
-                </div>
+                </Style>
             );
-        })
+        });
 
         return (
 
-            <Style>
-                <h2>Suas Playlists</h2>
-                { this.state.playlist.length ? (mostrarList) : (<p>Carregando playlists ...</p>)}
-                <hr />
+            <Style>  
+                <h2><i>Suas Playlists</i></h2> 
+                { this.state.playlist.length ? (mostrarList) : (<p className="menssagem-sem-playlist">Você ainda não tem playlist adicione algúma na home.</p>)}
             </Style>
         )
     }

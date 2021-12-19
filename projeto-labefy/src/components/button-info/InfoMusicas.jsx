@@ -1,5 +1,9 @@
 import React from "react";
 
+// Import Styles
+import {StyledButtonInfo} from "./StyleButtons";
+// ----------------------------------------------------------------
+
 class InfoMusicas extends React.Component {
 
     state = {
@@ -14,7 +18,7 @@ class InfoMusicas extends React.Component {
 
         return (
 
-            <div>
+            <StyledButtonInfo>
               {
                     this.state.buttonMostrar ? 
                     <div>
@@ -26,7 +30,7 @@ class InfoMusicas extends React.Component {
                         {this.props.detalhes}
                     </div>
                 }
-            </div>
+            </StyledButtonInfo>
         )
     }
 };

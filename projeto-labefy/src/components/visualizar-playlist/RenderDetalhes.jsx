@@ -17,7 +17,7 @@ class RenderDetalhes extends React.Component {
         valueNome: "",
         valueArtista: "",
         valueUrl: ""
-    }
+    };
 
     componentDidMount () {
         this.detalhesDaPlaylist();
@@ -54,6 +54,7 @@ class RenderDetalhes extends React.Component {
 
     adicinarTracks = () => {
 
+
         axios.post(`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${this.props.idProps}/tracks`,
         {
             name: this.state.valueNome,
@@ -68,10 +69,30 @@ class RenderDetalhes extends React.Component {
         )
         .then(res => {
             alert("Musica adicionada :)")
-            
+            this.detalhesDaPlaylist();
+            this.setState({
+                valueNome: "",
+                valueArtista: "",
+                valueUrl: ""
+             }); 
         })
         .catch(err => {
-            alert("Erro ao adicionar musica. Desculpe :(")
+            alert("Preencha todos os campos.")
+        });
+    };
+
+    excluirTrack = (id) => {
+        axios.delete(`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${this.props.idProps}/tracks/${id}`,
+        {
+            headers: { Authorization: "gabriel-silva-joy"}
+        }
+        )
+        .then(res => {
+            alert("Musica excluida!")
+            this.detalhesDaPlaylist()
+        })
+        .catch(err => {
+            alert("Erro ao excluir musica!")
         })
     };
 
@@ -81,26 +102,44 @@ class RenderDetalhes extends React.Component {
             return (
                 <StyleRenderList>
                       
-                      <div>
-                          <p>Autor: {detalhe.artist}</p>
-                           <p>Musica: {detalhe.name}</p>
+                      <div key={detalhe.id}>
+                          <p><i>Autor: {detalhe.artist}</i></p>
+                           <p><i>Musica: {detalhe.name}</i></p>
                            <audio controls>
-                            <source src="" />
+                                <source src={detalhe.url} />
+                                <source src={detalhe.url} />
+                                Seu navegador não suporta esse tipo de áudio.
                             </audio>
+                            <button className="btn-excluir-musica"
+                             onClick={() => this.excluirTrack(detalhe.id)}>Excluir musica</button>
+                            <br />
                       </div>
+                      <hr />
     
               </StyleRenderList>
-            )
+            );
         });
 
         return (
 
             <div>
 
-            <InfoMusicas detalhes={detalhes}/>
-            <InfoAdd
-            />
-            
+                <InfoAdd
+                nome={this.state.valueNome}
+                onChangeNome={this.onChangeNome}
+                artista={this.state.valueArtista}
+                onChangeArtista={this.onChangeArtista}
+                url={this.state.valueUrl}
+                onChangeUrl={this.onChangeUrl}
+                adicinarTracks={this.adicinarTracks}
+                />
+
+                {
+                    this.state.playlistDetalhes.length ?
+                    <InfoMusicas detalhes={detalhes}/>
+                    : 
+                    <p className="menssagem-sem-musica">Playlist sem musicas adicione algúma.</p>
+                }
                 
             </div>
         )

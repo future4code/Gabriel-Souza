@@ -25,27 +25,31 @@ class App extends React.Component {
 
       if(this.state.button1){
         return <VisualizarPlaylist />
-      };
+      } else {
+        return  <AdicionarPlaylist />
+      }
     };
 
     return (
 
       <div className="div-geral">
 
-          <div>
-             <AdicionarPlaylist />
-          </div>
+                {setButton1()}
+                
+                <div className="button-move">
+                  {
+                    this.state.button1 ? (<button className="btn-vizualizar-playlist"
+                      onClick={this.button1}>Voutar</button>)
+                    : (<button className="btn-vizualizar-playlist"
+                      onClick={this.button1}>Visualizar Playlists</button>)
+                  }
+                </div>
 
-          <div className="button-move">
-            {
-              this.state.button1 ? (<button onClick={this.button1}>Fechar playlist</button>)
-              : (<button onClick={this.button1}>Vizualizar Playlist</button>)
-             }
-          </div>
+                <div className="div-footer">
+                  <footer>Criado por: Gabriel Silva</footer>
+               </div>
 
-          {setButton1()}
-
-        <GlobalStyle />
+          <GlobalStyle />
       </div>
    
       )
