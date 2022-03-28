@@ -9,7 +9,8 @@
     "ex2": "tsc && node ./build/exercicio-2",
     "ex3": "tsc && node ./build/exercicio-3",
     "ex4": "tsc && node ./build/exercicio-4",
-    "ex5": "tsc && node ./build/exercicio-5"
+    "ex5": "tsc && node ./build/exercicio-5",
+    "desafio": "tsc && node ./build/desafios"
   },
   "keywords": [],
   "author": "Gabriel-Silva",
