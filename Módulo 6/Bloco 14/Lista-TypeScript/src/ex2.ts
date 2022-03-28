@@ -1,3 +1,4 @@
-let b= "ex2";
-
-console.log(b)
+const typeVariable = (value: any): any => {
+    return typeof value;
+};
+//* console.log(typeVariable(true))
