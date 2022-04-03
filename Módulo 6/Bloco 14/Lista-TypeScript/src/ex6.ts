@@ -1,7 +1,7 @@
 type User = {
     client: string,
     totalBalance: number,
-    debts: number[]
+    debts: number[] | any
 };
 
 const arrayUsersBank: Array <User> = [
@@ -13,9 +13,12 @@ const arrayUsersBank: Array <User> = [
 	{ client: "Soter",  totalBalance: 1200, debts: [] }
 ];
 
+const negativeBalanceUser = arrayUsersBank.filter((value) => {
+    const valueDebsTotal=  value.debts.reduce(( initialValue: any, currencyValue: any ) => initialValue + currencyValue, 0 );
+    value.debts = value.debts.reduce(( initialValue: any, currencyValue: any ) => initialValue + currencyValue, 0 ) - valueDebsTotal;
+    
+    value.totalBalance = value.totalBalance - valueDebsTotal;
 
-const negativeBalanceUser = arrayUsersBank.filter((userValuesDebts) => {
-    return userValuesDebts.totalBalance - userValuesDebts.debts.reduce(( acc, number ) => 
-    acc + number, 0) < 0;
+    return value.totalBalance < 0;
 });
-// console.table(negativeBalanceUser);
+// console.log(negativeBalanceUser);
