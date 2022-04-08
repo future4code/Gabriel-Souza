@@ -3,7 +3,7 @@ export enum Types {
     ADMIN = "ADMIN"
 }
 
-type Users = {
+export type Users = {
     id: number,
     name: string,
     email: string,
