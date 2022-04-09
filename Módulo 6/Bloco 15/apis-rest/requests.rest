@@ -1,0 +1,62 @@
+// Para requisições com body:
+// Content-Type: application/json
+
+// Para requisições com headers: 
+// Authorization: "token"
+
+
+###
+GET http://localhost:3003/teste
+
+
+###
+GET http://localhost:3003/users
+
+###
+GET http://localhost:3003/users/Admin
+
+###
+GET http://localhost:3003/users?name=bob
+
+###
+POST http://localhost:3003/users
+Content-Type: application/json
+
+{
+    "name": "ai tese",
+    "email": "olateste@gmail.com",
+    "type": "ADMIN" ,
+    "age": 75
+}
+
+
+
+
+
+
+###
+# GET http://localhost:3003/users/50
+
+# ###
+# POST http://localhost:3003/users
+# Content-Type: application/json
+
+# {
+#     "id": 50,
+#     "name": "rod",
+#     "email": "email@email",
+#     "type": "NORMAL",
+#     "age": 32
+# }
+
+# ###
+# PATCH http://localhost:3003/users
+# Content-Type: application/json
+
+# {
+#     "id": 50,
+#     "name": "rod",
+#     "email": "email@email",
+#     "type": "NORMAL",
+#     "age": 33
+# }
