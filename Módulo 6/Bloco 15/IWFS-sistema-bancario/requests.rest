@@ -22,4 +22,8 @@ Content-Type: application/json
 
 ###
 PUT http://localhost:3003/user-add-balance
-//* Fiz pelo posman
+//* Fiz pelo posman não conseguir utilizar o headers por aqui
+
+###
+PUT http://localhost:3003/user/Gabriel Silva/transfer-money
+//* Fiz pelo posman não conseguir utilizar o headers por aqui
