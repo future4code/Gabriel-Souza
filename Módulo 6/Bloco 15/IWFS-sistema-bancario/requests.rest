@@ -1,0 +1,29 @@
+// Para requisições com body:
+// Content-Type: application/json
+
+// Para requisições com headers: 
+// Authorization: "token"
+
+###
+GET http://localhost:3003/users
+
+###
+GET http://localhost:3003/user-information?cpf=152-15
+
+###
+POST http://localhost:3003/user-create-account
+Content-Type: application/json
+
+{
+    "name": "oi",
+    "age": "23/02/2000",
+    "cpf": "152-1521"
+}
+
+###
+PUT http://localhost:3003/user-add-balance
+//* Fiz pelo posman não conseguir utilizar o headers por aqui
+
+###
+PUT http://localhost:3003/user/Gabriel Silva/transfer-money
+//* Fiz pelo posman não conseguir utilizar o headers por aqui
