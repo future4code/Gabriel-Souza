@@ -99,4 +99,131 @@ WHERE id = 5;
 
 <br>
 
-### EX 3
+### EX : 3
+#### Para finalizar o CRUD, vamos ver o D: `DELETE`. Esse operador permite deletar toda uma linha de uma tabela, seria como apagar um elemento dela.
+
+- a )  Escreva uma query que apague a atriz com o nome Fernanda Montenegro
+```sql
+    # Escolhir o Tony Ramos
+    DELETE FROM actor WHERE name = "Tony Ramos";
+```
+
+<br>
+
+b ) Escreva uma query que apague todos os atores (do gênero male) com o salário maior do que R$1.000.000,00
+```sql
+DELETE FROM actor WHERE 
+gender = "male" AND salary > 1000000;
+```
+
+<br>
+
+### EX : 4
+
+<br>
+
+- a) Escreva uma query que pegue o maior salário de todos os atores e atrizes
+```sql
+    SELECT MAX(salary) AS max_salary FROM actor;
+```
+
+<br>
+
+- b ) Escreva uma query que pegue o menor salário das atrizes
+```sql
+    SELECT MIN(salary) FROM 
+    actor WHERE gender = "female";
+```
+
+<br>
+
+- c ) Escreva uma query que pegue a quantidade de atrizes
+```sql
+    SELECT COUNT(*) FROM
+    actor WHERE gender = "female";
+```
+
+<br>
+
+- d ) Escreva uma query que pegue a soma de todos os salários
+```sql
+    SELECT SUM(salary) FROM actor;
+```
+
+<br>
+
+### EX :  5
+
+<br>
+
+- a ) Releia a última query. Teste-a. Explique o resultado com as suas palavras
+```sql
+    SELECT COUNT(*), gender
+    FROM Actor
+    GROUP BY gender
+```
+- Resposta : Ele retornou uma tabela como a primerira coluna com o nome `COUNT(*)` e a segunda coluna com o nome `gender`. Na primeira linha ele trouxe a quantidade de atores do sexo **feminino** e a segunda linha trouxe a quantidade de atores do sexo **masculino**.
+
+<br>
+
+- b ) Faça uma query que retorne somente o id e o nome dos atores em ordem decrescente alfabética
+```sql
+    SELECT id, name FROM actor ORDER BY name DESC;
+```
+
+<br>
+
+- c ) Faça uma query que retorne todos os atores ordenados pelo salário
+```sql
+    SELECT * FROM actor ORDER BY salary ASC;
+```
+
+<br>
+
+- d ) Faça uma query que retorne os atores com os três maiores salarios
+```sql
+    SELECT * FROM actor ORDER BY salary DESC LIMIT 3;
+```
+
+<br>
+
+- e ) Faça uma query que retorne a média de salário por gênero
+```sql
+    SELECT AVG(salary), gender 
+    FROM actor GROUP BY gender;
+```
+
+<br>
+
+### EX : 6
+#### Você já pegou o padrão né? Primeiro fazemos algo guiado e depois deixamos você fazer a sós!
+
+<br>
+
+- a ) Altere a tabela de Movie e adicione um novo parâmetro: playing_limit_date que indique a data limite em que o filme será passado no cinema. 
+```sql
+    ALTER TABLE movies
+    ADD playing_limit_date DATE;
+```
+
+<br>
+
+- b ) Altere a tabela de Movie para que o parâmetro rating possa aceitar valores não inteiros, como, por exemplo, uma avaliação 8.5.
+```sql
+    ALTER TABLE movies
+    CHANGE rating rating FLOAT NOT NULL;
+```
+
+<br>
+
+- c ) Atualize dois filmes de tal forma que tenhamos um que ainda esteja em cartaz e um que já tenha saído
+```sql
+    UPDATE movies
+    SET playing_limit_date = "2018-01-01"
+    WHERE id = "003";
+```
+
+<br>
+
+- d ) Delete algum dos filmes, mas guarde o id. Tente fazer uma query para atualizar a sinopse desse filme que você acabou de deletar (usando o mesmo id). Anote o resultado e explique.
+- Resposta: Eu não conseguir DELETA sem guardar o id.
