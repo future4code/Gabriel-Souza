@@ -1,0 +1,53 @@
+
+###
+GET http://localhost:3003/users/11
+
+
+###
+GET http://localhost:3003/users?name=Gabriel
+
+
+###
+GET http://localhost:3003/users/genders
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Exercicio anterior
+
+###
+GET http://localhost:3003/actor
+
+
+###
+POST http://localhost:3003/actor
+Content-Type:  application/json
+
+{
+    "name": "Gabriel Silva",
+    "salary": 500000,
+    "birthDate": "1998-02-23",
+    "gender": "male"
+}
+
+
+###
+PUT http://localhost:3003/actor/11
+Content-Type:  application/json
+
+{
+    "salary": 320000000
+}
+
+
+###
+DELETE  http://localhost:3003/actor/6
