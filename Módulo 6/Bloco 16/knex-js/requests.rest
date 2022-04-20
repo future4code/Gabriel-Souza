@@ -1,14 +1,35 @@
 
 ###
-GET http://localhost:3003/users/11
+GET http://localhost:3003/actors/11
 
 
 ###
-GET http://localhost:3003/users?name=Gabriel
+GET http://localhost:3003/actors?gender=female
+
+###
+POST http://localhost:3003/actor
+Content-Type:  application/json
+
+{
+    "name": "Crocôdilo do Pântano",
+    "salary": 500000,
+    "birthDate": "2002-02-02",
+    "gender": "male"
+}
 
 
 ###
-GET http://localhost:3003/users/genders
+PUT http://localhost:3003/actor
+Content-Type:  application/json
+
+{
+    "id": 11,
+    "salary": 25252520000
+}
+
+
+###
+DELETE http://localhost:3003/actor/7
 
 
 

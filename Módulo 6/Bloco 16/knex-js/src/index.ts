@@ -8,15 +8,17 @@ const app: Express = express();
 app.use(express.json());
 app.use(cors());
 
+//* EX: 1
+
 //* Esse arquivo seria o index.ts
 
-// const getActorById = async (id: number): Promise<any> => {
-//     const result = await connection.raw(`
-//       SELECT * FROM actor WHERE id = '${id}'
-//     `)
+const getActorById = async (id: number): Promise<any> => {
+    const result = await connection.raw(`
+      SELECT * FROM actor WHERE id = '${id}'
+    `)
   
-//       return result[0][0]
-//   }
+      return result[0][0]
+  }
   
 //   //* Assim a chamada funciona fora dos endpoints com .then()/.catch
 //   getActorById(11)
@@ -32,6 +34,7 @@ app.use(cors());
 //   console.log(await getActorById(11) )
 // })()
 
+//* EX : 1 : a )
 // app.get("/users/:id", async (req: Request, res: Response) => {
 //     try {
 //       const id = req.params.id
@@ -45,21 +48,71 @@ app.use(cors());
 //       res.status(500).send("Unexpected error")
 //     }
 //   }) //* bata no http://localhost:3003/users/001 e veja o que acontece no terminal
+//* =====================================================================
+
+//* EX : 1 : b )
+const searchActor = async (name: string): Promise<any> => {
+  const result = await connection.raw(`
+    SELECT * FROM actor WHERE name = "${name}"
+  `)
+  return result
+};
 
 
-  app.get("/users", async (req: Request, res: Response): Promise<void> => {
-    try {
+  //* EX : 1 : c )
+  const countActors = async (gender: string): Promise<any> => {
+    const result = await connection.raw(`
+      SELECT COUNT(*) as count FROM actor WHERE gender = "${gender}"
+    `);
+    // Só colocamos esse "as count" como apelido, para ficar mais fácil de pegar
+    // o valor no resultado!
+    const count = result[0][0].count;
+    return count;
+  };
 
-        const name = req.query.name;
+  //* ======================================================================
+  
+  //* EX: 2
 
-        //* Fazendo com Raw
-        // const result = await connection.raw(`
-        //     SELECT * FROM actor WHERE name = "${name}"
-        // `);
-        
-        const result = await connection("actor").where(`name`, 'like', `%${name}%`)
+  //* EX : 2 : a )
+  const updateActor = async (id: number, salary: number): Promise<any> => {
+    await connection("actor")
+      .update({
+        salary: salary,
+      })
+      .where("id", id);
+  };
 
-        res.status(200).send(result[0]);
+
+  //* EX : 2 : b )
+  const deleteActor = async (id: number): Promise<void> => {
+    await connection("actor")
+      .delete()
+      .where("id", id);
+  }; 
+
+
+//* EX : 2 : c )
+const avgSalary = async (gender: string): Promise<any> => {
+  const result = await connection("actor")
+    .avg("salary as average")
+    .where({ gender });
+
+  return result[0].average;
+};
+
+  //* =====================================================================
+
+  //* EX : 3
+
+  //* EX : 3 : a )
+  app.get("/actors/:id", async ( req: Request, res: Response) => {
+      try {
+
+        const id = req.params.id;
+        const actor = await getActorById(Number(id));
+
+        res.status(200).send(actor);
 
     } catch( error: any ) {
         res.status(500).send(error.sqlMessage || error.message);
@@ -67,22 +120,80 @@ app.use(cors());
   });
 
 
-  app.get("/users/genders", async (req: Request, res: Response): Promise<void> => {
+  //* EX : 3 : b )
+  app.get("/actors", async ( req: Request, res: Response ) => {
     try {
-
-        //* Fazendo com Raw
-        const result = await connection.raw(`
-        SELECT COUNT(*), gender
-        FROM actor
-        GROUP BY gender
-        `);
-
-        res.status(200).send(result[0]);
-
-    } catch( error: any ) {
-        res.status(500).send(error.sqlMessage || error.message);
+      const count = await countActors(req.query.gender as string);
+      res.status(200).send({
+        quantity: count,
+      });
+    } catch ( error: any ) {
+      res.status(500).send(error.sqlMessage || error.message);
     }
   });
+
+  //* ==================================================================================
+
+  //* EX : 4
+
+  //* Criando um novo ator
+  app.post("/actor", async ( req: Request, res: Response) => {
+    try {
+
+      await connection("actor").insert({
+        name: req.body.name,
+        salary: req.body.salary,
+        birth_date: new Date(req.body.birthDate),
+        gender: req.body.gender
+      });
+
+      res.status(201).send({ message: `Ator ${req.body.name} criado  em ${new Date()}` });
+
+    } catch ( error: any ){
+      res.status(500).send(error.sqlMessage || error.message);
+    }
+  });
+
+  //* EX : 4 : a )
+  app.put("/actor", async ( req: Request, res: Response) => {
+
+    try {
+
+        const { id, salary } = req.body
+
+        updateActor(Number(id), salary);
+
+        res.status(202).send({ message: `Salario atualiza para ${salary}` });
+
+    } catch ( error: any ) {
+      res.status(500).send(error.sqlMessage || error.message);
+    }
+  });
+
+
+  //* EX : 4 : b )
+  app.delete("/actor/:id", async ( req: Request, res: Response) => {
+    try { 
+    
+      const UserId = req.params.id;
+
+      await deleteActor(Number(UserId));
+
+      res.status(200).send({ message: "Usuário deletado."})
+
+    } catch ( error: any ) {
+      res.status(500).send(error.sqlMessage || error.message);
+    }
+  });;
+
+
+
+
+
+
+
+
+
 
 
 
