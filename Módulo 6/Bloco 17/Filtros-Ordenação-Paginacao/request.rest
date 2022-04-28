@@ -1,0 +1,13 @@
+### 
+GET http://localhost:3003/users/1?name=amanda&type=teacher
+
+
+# ### 
+# GET http://localhost:3003/users/teach
+
+
+# ### 
+# GET http://localhost:3003/users?type=cx&order=DEsc
+
+# ### 
+# GET http://localhost:3003/users/pages
