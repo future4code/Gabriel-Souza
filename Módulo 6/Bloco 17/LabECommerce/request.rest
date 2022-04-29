@@ -1,0 +1,44 @@
+###
+GET http://localhost:3003/users
+
+###
+GET http://localhost:3003/users/24dcc248-ea89-4dd4-be7d-784a9875b02a
+
+### 
+POST http://localhost:3003/user
+Content-Type: application/json
+
+{
+    "name": "Gztvva",
+    "nickName":"gtaqqaab",
+    "email": "olaaasa"
+}
+
+### 
+PUT http://localhost:3003/user/edit/24dcc248-ea89-4dd4-be7d-784a9875b02a
+Content-Type: application/json
+
+{
+    "name": "Gabriel Silva",
+    "nickName": "GabrielSS155"
+}
+
+
+###
+POST http://localhost:3003/task
+Content-Type: application/json
+
+{
+    "title": "Ola Teste",
+    "description": "Teste Teste Teste 2",
+    "status": "",
+    "limitDate": "20/09/2025",
+    "creatorUserId": "24dcc248-ea89-4dd4-be7d-784a9875b02a"
+}
+
+###
+GET http://localhost:3003/task/0359464a-a0f4-4c18-9d8f-94b6ad293f84
+
+
+###
+GET http://localhost:3003/task?creatorUserId=24dcc248-ea89-4dd4-be7d-784a9875b02a
