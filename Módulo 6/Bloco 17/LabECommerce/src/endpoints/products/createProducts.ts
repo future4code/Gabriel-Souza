@@ -1,0 +1,52 @@
+import { Request, Response } from "express";
+
+import { connection } from "../../data/connection";
+
+import {v4 as uuids4} from 'uuid';
+
+
+//* Criar Produtos no banco de dados.
+async function insertProductsCreate( name: string, price: number, imageUrl: string ): Promise<any> {
+    
+    await connection("labecommerce_products").insert({
+        id: uuids4(),
+        name,
+        price,
+        image_url: imageUrl
+    });
+
+};
+
+
+export const createProduct = async ( req: Request, res: Response ): Promise<any> => {
+
+    type Product = { name: string, price: number, imageUrl: string };
+
+    try {
+
+        const { name, price, imageUrl }: Product = req.body;
+
+        if ( !name || !price || !imageUrl ) {
+            throw new Error("Algúma informação estar faltando. Por favor consulte a documentação.");
+        };
+
+        if ( price < 0.99 ) {
+            throw new Error("O preço não pode ser menor que 0.99.");
+        };
+
+        await insertProductsCreate( name, price, imageUrl );
+
+        return res.status(201).json({ message: `Produto ${name} criado com sucesso.` }).end();
+
+    } catch ( error: any ) {
+        switch( error.message ) {
+            case "Algúma informação estar faltando. Por favor consulte a documentação.":
+                return res.status(400).send(error.message || error.sqlMessage);
+            case "O preço não pode ser menor que 0.99.":
+                return res.status(400).send( error.message || error.sqlMessage);
+            default:
+                return res.status(500).send(error.message || error.sqlMessage);
+        };
+    };
+
+};

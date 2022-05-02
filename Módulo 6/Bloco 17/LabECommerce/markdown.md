@@ -1,3 +1,12 @@
+<h1 align="center">LabeEcommerce</h1>
+
+## Todos os exercicios feitos inclusive os desafios.
+
+<br />
+
+## Documentação API
+
+```
 ### 
 # GET http://localhost:3003/users
 GET http://localhost:3003/users?name=gabriel silva 2
@@ -13,7 +22,7 @@ Content-Type: application/json
     "password": "ywduopd73d39jjg467"
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ###
 GET http://localhost:3003/products
@@ -41,3 +50,4 @@ Content-Type: application/json
     "idUser": "0a4147ad-30dd-4547-9e35-94e655d02f13",
     "idProduct": "be5d79f8-427d-4eea-aa1b-08345520be44"
 }
+```
