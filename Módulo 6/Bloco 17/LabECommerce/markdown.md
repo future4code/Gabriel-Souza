@@ -4,7 +4,7 @@
 
 <br />
 
-## Documentação API
+## Documentação API básica
 
 ```
 ### 

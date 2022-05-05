@@ -38,8 +38,12 @@ export const getAllProducts =  async ( req: Request, res: Response ): Promise<an
 
         return res.status(200).json( productList ).end();
 
-    } catch ( error: any ) {
-        return res.status(statusCode).send(error.message || error.sqlMessage);
+    } catch ( error ) {
+        if (error instanceof Error) {
+            res.send(error.message);
+          } else {
+            return res.status(statusCode).send(error.message || error.sqlMessage);
+          }
     };
 
 };

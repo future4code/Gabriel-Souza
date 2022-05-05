@@ -4,7 +4,8 @@ import { connection } from "../../data/connection";
 
 import {v4 as uuids4} from 'uuid';
 
-import { checkSpace } from "../../functions-utilities/checkSpaces";
+import { checkSpace } from "../../services/checkSpaces";
+import  { bodyEmail }  from "../../services/nodemailer";
 
 //* Create User
 async function createUser( name: string, email: string, password:  string ): Promise<any> {
@@ -36,18 +37,22 @@ export const insertUserCreate = async (  req: Request, res: Response ): Promise<
         };
 
         await createUser( name, email, password );
+        await bodyEmail(name, email, password);
 
         return res.status(201).json({ message: `Usuário ${name} criado com sucesso.` }).end();
 
-    } catch ( error: any ) {
-        switch( error.message ) {
-            case "Algúma informação estar faltando. Por favor consulte a documentação.":
-                return res.status(400).send(error.message || error.sqlMessage);
-            case "O email e senha não podem conter espaços.":
-                return res.status(400).send(error.message || error.sqlMessage);
-            default:
-                return res.status(500).send(error.message || error.sqlMessage);
+    } catch ( error ) {
+        if (error instanceof Error) {
+            res.send(error.message);
+          } else {
+            switch( error.message ) {
+                case "Algúma informação estar faltando. Por favor consulte a documentação.":
+                    return res.status(400).send(error.message || error.sqlMessage);
+                case "O email e senha não podem conter espaços.":
+                    return res.status(400).send(error.message || error.sqlMessage);
+                default:
+                    return res.status(500).send(error.message || error.sqlMessage);
+            };
         };
     };
-
 };

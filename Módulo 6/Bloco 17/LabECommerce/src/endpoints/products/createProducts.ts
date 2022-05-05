@@ -38,15 +38,18 @@ export const createProduct = async ( req: Request, res: Response ): Promise<any>
 
         return res.status(201).json({ message: `Produto ${name} criado com sucesso.` }).end();
 
-    } catch ( error: any ) {
-        switch( error.message ) {
-            case "Algúma informação estar faltando. Por favor consulte a documentação.":
-                return res.status(400).send(error.message || error.sqlMessage);
-            case "O preço não pode ser menor que 0.99.":
-                return res.status(400).send( error.message || error.sqlMessage);
-            default:
-                return res.status(500).send(error.message || error.sqlMessage);
+    } catch ( error ) {
+        if (error instanceof Error) {
+            res.send(error.message);
+          } else {
+            switch( error.message ) {
+                case "Algúma informação estar faltando. Por favor consulte a documentação.":
+                    return res.status(400).send(error.message || error.sqlMessage);
+                case "O preço não pode ser menor que 0.99.":
+                    return res.status(400).send( error.message || error.sqlMessage);
+                default:
+                    return res.status(500).send(error.message || error.sqlMessage);
+            };
         };
     };
-
 };

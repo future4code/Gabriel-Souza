@@ -47,8 +47,12 @@ export const getAllUsers = async (req: Request,res: Response): Promise<any> =>{
             }).end();
         };
 
-    } catch ( error: any ) {
-        return res.status(statusCode).send(error.message || error.sqlMessage);
+    } catch ( error ) {
+        if (error instanceof Error) {
+            res.send(error.message);
+          } else {
+            return res.status(statusCode).send(error.message || error.sqlMessage);
+        };
     };
 };
 
