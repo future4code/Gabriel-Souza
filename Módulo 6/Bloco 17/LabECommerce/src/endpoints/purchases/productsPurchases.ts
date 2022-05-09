@@ -59,18 +59,18 @@ export const insertRelationalPurchases = async ( req: Request, res: Response ): 
 
     } catch ( error ) {
         if (error instanceof Error) {
-            res.send(error.message);
-          } else {
             switch( error.message ) {
-                case "Algúma informação estar faltando. Por favor consulte a documentação.":
-                    return res.status(400).send(error.message || error.sqlMessage);
+                case "Alguma informação esta faltando. Por favor consulte a documentação.":
+                    return res.status(400).send(error.message);
                 case "Produto não encontrado.":
-                    return res.status(404).send(error.message || error.sqlMessage);
-                case "Usuario não encontrado ou não existe.":
-                    return res.status(404).send(error.message || error.sqlMessage);
+                    return res.status(404).send(error.message);
+                case "Usuário não encontrado ou não existe.":
+                    return res.status(404).send(error.message);
                 default:
-                    return res.status(500).send(error.message || error.sqlMessage);
+                    return res.status(500).send(error.message);
             };
+          } else {
+            res.send(error.message || error.sqlMessage);
         };
     };
 };

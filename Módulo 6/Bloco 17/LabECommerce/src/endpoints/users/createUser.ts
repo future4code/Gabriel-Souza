@@ -21,7 +21,7 @@ async function createUser( name: string, email: string, password:  string ): Pro
 
 
 export const insertUserCreate = async (  req: Request, res: Response ): Promise<any> => {
-
+    
     type User = { name: string, email: string, password: string };
 
     try {
@@ -32,8 +32,14 @@ export const insertUserCreate = async (  req: Request, res: Response ): Promise<
             throw new Error("Algúma informação estar faltando. Por favor consulte a documentação.");
         };
 
+        const checkingEmailExists = await connection("labecommerce_users").where("email", `${email}`);
+
         if ( checkSpace( email ) || checkSpace(password) ) {
             throw new Error("O email e senha não podem conter espaços.");
+        };
+
+        if ( checkingEmailExists[0] ) {
+            throw new Error("Já existe um usuário com esse email.");
         };
 
         await createUser( name, email, password );
@@ -43,16 +49,18 @@ export const insertUserCreate = async (  req: Request, res: Response ): Promise<
 
     } catch ( error ) {
         if (error instanceof Error) {
-            res.send(error.message);
-          } else {
             switch( error.message ) {
-                case "Algúma informação estar faltando. Por favor consulte a documentação.":
-                    return res.status(400).send(error.message || error.sqlMessage);
+                case "Alguma informação esta faltando. Por favor consulte a documentação.":
+                    return res.status(400).send(error.message);
                 case "O email e senha não podem conter espaços.":
-                    return res.status(400).send(error.message || error.sqlMessage);
+                    return res.status(400).send(error.message);
+                case "Já existe um usuário com esse email.":
+                    return res.status(409).send(error.message);
                 default:
-                    return res.status(500).send(error.message || error.sqlMessage);
+                    return res.status(500).send(error.message);
             };
+          } else {
+            res.send(error.message || error.sqlMessage);
         };
     };
 };

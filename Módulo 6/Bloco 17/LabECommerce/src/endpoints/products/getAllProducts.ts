@@ -40,10 +40,9 @@ export const getAllProducts =  async ( req: Request, res: Response ): Promise<an
 
     } catch ( error ) {
         if (error instanceof Error) {
-            res.send(error.message);
+            return res.status(statusCode).send(error.message);
           } else {
-            return res.status(statusCode).send(error.message || error.sqlMessage);
-          }
+            return res.send(error.message || error.sqlMessage);
+          };
     };
-
 };
