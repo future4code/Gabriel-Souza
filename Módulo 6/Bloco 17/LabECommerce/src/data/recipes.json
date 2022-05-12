@@ -1,0 +1,121 @@
+[
+	{
+		"id" : "1",
+		"user_id" : "c4eaac6c-584a-40d8-be06-3e2389ddbeda",
+		"title" : "BIFE À PARMEGIANA",
+		"description" : "Bife: Tempere os bifes com alho e sal e reserve. Bata o ovo inteiro e passe os bifes pelo ovo e pela farinha de rosca. Aqueça em uma frigideira o óleo e frite os bifes, escorra-os em papel-toalha e vá dispondo em um refratário. Molho: Refogue a cebola no óleo, junte o molho de tomate, o catchup, a mostarda, o sal, salsinha e cebolinha, abaixe o fogo e deixe o molho apurar. Montagem: Despeje o molho pronto sobre os bifes e distribua queijo mussarela sobre os bifes Salpique delicadamente um pouco de orégano por cima do queijo e leve ao forno até derreter o queijo. Sirva com arroz e purê de batatas.",
+		"created_at" : 1598404461000
+	},
+	{
+		"id" : "10",
+		"user_id" : "93fbbfc4-9bb5-4881-9ecb-ddd47b12de98",
+		"title" : "SOPA CREMOSA DE COUVE-FLOR",
+		"description" : "Bata, no liquidificador, a água, o leite, a farinha de trigo, a couve-flor cozida no vapor e o queijo cremoso por uns 3 minutos. Coloque numa panela funda e leve ao fogo, tempero com sal e pimenta a gosto. Mexa frequentemente até engrossar. Desligue o fogo e junte a noz-moscada e misture bem. Sirva em cumbuquinhas separadas colocando alguns cubos de queijo prata e o creme de couve-flor por cima. Polvilhe com cebolinha verde picada e sirva em seguida.",
+		"created_at" : 556942461000
+	},
+	{
+		"id" : "11",
+		"user_id" : "c4eaac6c-584a-40d8-be06-3e2389ddbeda",
+		"title" : "CUPCAKE DE FRUTAS",
+		"description" : "Com fouet (batedor manual) misture: ovos, manteiga e açúcar. Acrescente a farinha de trigo e misture, por último o fermento em pó e as frutas com casca,sem sementes e em cubos (a banana apenas em cubos) Coloque em forminhas de papel, encaixe em forminhas de empada e depois coloque em uma assadeira. Leve em formo preaquecido a 180° C,deixe por aproximadamente 30 minutos. Derreta o chocolate no micro-ondas, por aproximadamente 1 minuto ,verificando a cada 20 segundos. Retire os cupcakes frios das forminhas de empada coloque a cobertura de ganache e meia rodela de banana.",
+		"created_at" : -484436739000
+	},
+	{
+		"id" : "12",
+		"user_id" : "f5037664-eefc-48db-ae20-9388373ca57c",
+		"title" : "PÉ-DE-MOLEQUE",
+		"description" : "Ponha em uma panela o amendoim, o leite condensado, o leite, o açúcar e a manteiga. Misture bem e leve ao fogo mexendo sempre até começar a aparecer o fundo da panela. Junte algumas gotas de limão, retire do fogo e bata sempre, até começar a açucarar. Despeje em um mármore untado com manteiga e, depois de frio, corte em tabletes.",
+		"created_at" : 1355278461000
+	},
+	{
+		"id" : "2",
+		"user_id" : "0a4147ad-30dd-4547-9e35-94e655d02f13",
+		"title" : "DADINHO DE TAPIOCA",
+		"description" : "Aqueça o leite em uma panela. Quando o leite estiver bem quente, desligue o fogo, adicione o queijo coalho ralado e continue mexendo. Logo em seguida adicione a farinha de tapioca granulada e continue mexendo. Adicione o sal e pimenta a gosto. Pare de mexer quando todos os ingredientes estiverem bem misturados. Despeje em uma forma coberta com papel filme (pvc), cubra em cima também e leve para a geladeira por duas horas. Depois retire da geladeira, corte em quadradinhos (dadinhos) e frite aos poucos em óleo quente ou coloque no forno até dourar. Sirva em seguida acompanhado da geleia de pimenta agridoce.",
+		"created_at" : 1598321661000
+	},
+	{
+		"id" : "3",
+		"user_id" : "4d3bc362-f838-43d6-9e06-5f3883873f74",
+		"title" : "MOLHO DE MOSTARDA, MEL E GENGIBRE",
+		"description" : "Misture o iogurte grego com o mel até obter uma mistura homogênea Adicione a mostarda e o suco de limão até obter uma nova mistura homogênea Adicione o azeite aos poucos e mexa para o azeite incorporar bem no molho Adicione sal e pimenta-do-reino a gosto Finalize com gengibre ralado, sempre experimentando para que não passe do ponto e fique muito forte",
+		"created_at" : 1597803261000
+	},
+	{
+		"id" : "4",
+		"user_id" : "5a7e728a-3afa-47d6-850d-0fba7786e6a7",
+		"title" : "RISOTO SALMÃO E ALHO PORÓ",
+		"description" : "Caldo Ferva 2 litros de água com 3 tabletes de legumes. Se quiser pode colocar no caldo alguns legumes de sua preferência. Eu coloquei algumas folhas do alho-poró picadas e 1 folha de couve. Numa panela frite os cubos se salmão com a manteiga por 5 minutos e reserve. Na mesma panela frite a cebola, alho e o alho poró. Acrescente o arroz arbóreo e frite mais um pouco. Acrescente o vinho e deixe evaporar. Colocar o caldo aos poucos. 1 concha por vez e mexer. Utilizando aos poucos conforme for reduzindo o caldo. Repetir até o arroz ficar a seu gosto. Misturar o salmão e mexer. Colocar o queijo e creme de leite e misturar bem. Se necessário coloque mais um pouco do caldo. Desligue e sirva na hora.",
+		"created_at" : 1595729661000
+	},
+	{
+		"id" : "5",
+		"user_id" : "62f8edd5-c522-44c3-92a7-bd3b6303465d",
+		"title" : "SOBRECOXA DE FRANGO ASSADA",
+		"description" : "No dia anterior de assar, tempere as sobrecoxas misturando-as a todos os ingredientes (use o alho triturado ou picado miúdo). Reserve em um pote bem tampado e conserve na geladeira. Para assar coloque as sobrecoxas numa assadeira com a pele voltada para baixo, coloque todo o tempero por cima e cubra com papel alumínio. Leve ao forno a 180° C por aproximadamente 1 hora e 30 minutos Veja se já estão cozidas (não coradas). Retire o papel-alumínio, vire a parte da pele para cima e leve de volta ao forno para corar. Para corar aumente a temperatura do forno para 200° C. Estarão prontas quando estiverem bem coradas.",
+		"created_at" : 1566785661000
+	},
+	{
+		"id" : "6",
+		"user_id" : "68a4897f-0126-4f8f-ad68-5ba3eaf4690d",
+		"title" : "SALADA RÁPIDA",
+		"description" : "Em uma panela, coloque o óleo, frango temperado cortado em quadrado, meia cebola e meio suco de limão. Lave os vegetais, em uma tábua corte o tomate, pimentão e o alface. Já com o ovo de codorna cozido, em um prato ou vasilha coloque todos os ingredientes de forma separada Coloque óregano, milho e maionese por cima.",
+		"created_at" : 1472177661000
+	},
+	{
+		"id" : "7",
+		"user_id" : "6a84572b-357b-495c-80ad-1f777ed1e7a1",
+		"title" : "SORVETE DE CHOCOLATE COM PÉ DE MOLEQUE",
+		"description" : "Numa panela, coloque 1 lata de leite condensado, 1 e 1/4 xícara (chá) de leite, 3 gemas dos ovos e leve ao fogo bem baixo, mexendo por mais ou menos 15 minutos. Apague o fogo e junte 2 xícaras (chá) de chocolate meio amargo picado. Misture bem até derreter o chocolate, adicione 1 caixinha de creme de leite e deixe esfriar. Coloque numa batedeira, 3 claras e bata até ficar em picos moles. Incorpore 2 colheres (sopa) de açúcar e bata mais um pouco. Desligue a batedeira e misture delicadamente no creme de chocolate já frio. Transfira a mistura para uma forma de bolo inglês forrada com saco plástico, salpique 1 xícara (chá) de pé de moleque picado e leve ao freezer por mais ou menos 4 horas.",
+		"created_at" : 1472782461000
+	},
+	{
+		"id" : "9",
+		"user_id" : "6c0ce3a2-8343-4d1b-b00f-448246e963ba",
+		"title" : "CARNE DE PANELA NA PRESSÃO",
+		"description" : "Refogue o alho (4 dentes picados ou triturados) com óleo ou banha. Assim que começar a dourar o alho, acrescente o colorífico (colorau) e os pedaços de carne. Frite um pouco mexendo a carne até que doure por todos os lados e acrescente 15 g de sal por kg de carne. Caso o peso de carne seja maior, acrescente de forma proporcional. Obs: Uma balança pequena ajuda Acrescente de água até 1,5 dedo antes de cobrir a carne (obs: a água não deve cobrir a carne). Deixe na pressão por 15 minutos. Desligue o fogo e acrescente as 3 batatas picadas e retorne à panela de pressão por mais 12 minutos (na pressão). Após os 12 minutos de pressão, deixe a pressão sair sozinha. Sirva em seguida",
+		"created_at" : 2639787261000
+	},
+	{
+		"id" : "5941ba28-adb4-4293-b6c9-0b20051cd7fa",
+		"user_id" : "9a70a143-6a71-4701-b691-db96686adc47",
+		"title" : "Torta de Morango",
+		"description" : "Coloque a farinha, faça um buraco e coloque todos os outros ingredientes e mexa até a massa ficar homogênea e lisa. Forre ela por completo na assadeira, como uma torta. Coloque no forno por 20 minutos ou até começar a ficar douradinha nos lados e reserve.",
+		"created_at" : 1601167717484
+	},
+	{
+		"id" : "b5783e28-51e4-434a-b080-17ba47b5a527",
+		"user_id" : "9a70a143-6a71-4701-b691-db96686adc47",
+		"title" : "SOPA DE ABÓBORA",
+		"description" : "Em uma panela grande, doure o alho em um fio de óleo e logo acrescente a cebola picada. Mexa rápido e acrescente a abóbora picada e a batata. Coloque a água e deixe ferver, após fervura colocar o caldo de legumes e mexer. Deixe cozinhar com tampa até a abóbora e a batata estarem cozidas. Desligue o fogo. E Espere amornar um pouco. Depois despeje tudo no liquidificador e bata até virar creme. Despeje na panela novamente e cozinhe uns 3 minutos com a cebolinha, acrescente sal se necessário. Sirva quente, com cubinhos de queijo branco e torradas.",
+		"created_at" : 1601173127996
+	},
+	{
+		"id" : "64337f6b-4fc9-4ec9-8d8b-2735555e977f",
+		"user_id" : "0c941b8e-0a4e-455e-9d8b-bb4ab69ca4ad",
+		"title" : "PERU DE NATAL",
+		"description" : "Para manter a textura, o certo é descongelar o peru de maneira lenta e uniforme. Para isso, coloque o peru ainda na embalagem sobre uma assadeira e leve para a geladeira. Deixe descongelar por cerca de 48 horas. Preaqueça o forno a 220 ºC (temperatura alta). Separe um pano de prato velho e limpo. Corte o pano ao meio para formar um quadrado - ele vai ser usado na hora de secar e assar o peru, depois descartado. Retire o peru (descongelado) da geladeira e reserve os miúdos para fazer o molho. Para amenizar o sabor artificial do tempero pronto: coloque o peru numa tigela grande e lave sob água corrente. Cubra com água limpa e deixe de molho por 10 minutos. Descarte a água e repita o mesmo processo mais uma vez - isso serve para tirar o excesso de tempero do peru.",
+		"created_at" : 1601176919401
+	},
+	{
+		"id" : "f2fc5fe0-28af-412f-9b62-f33ad90d077c",
+		"user_id" : "0c941b8e-0a4e-455e-9d8b-bb4ab69ca4ad",
+		"title" : "PAVÊ DE BOLACHA",
+		"description" : "Molhe os biscoitos maizena no leite com chocolate Prepare cada creme juntando seus ingredientes em uma panela e mexa em fogo brando até engrossar Para a cobertura, bata as claras com o açúcar até obter claras em neve bem consistentes Misture o creme de leite as claras em neve Coloque em um refratário grande na seguinte sequência: creme branco, metade das bolachas, creme de chocolate, restante das bolachas, claras em neve Dica: Decore com chocolate granulado ou raspas de chocolate ao leite ou coco ralado",
+		"created_at" : 1601177035733
+	},
+	{
+		"id" : "69ff872a-8dcb-49e5-8ac4-580fbf5bb073",
+		"user_id" : "9a70a143-6a71-4701-b691-db96686adc47",
+		"title" : "Bolo de Cenoura",
+		"description" : "Bata no liquidificador todos os ingredientes, acrescentando a farinha aos poucos. Depois unte e enfarinhe uma forma e despeje a massa nela. Asse em forno médio por cerca de 40 minutos. Tire do forno, espere amornar e desenforme.",
+		"created_at" : 1601474769247
+	},
+	{
+		"id" : "87b9d2d5-bf1c-4019-9b84-26692610207f",
+		"user_id" : "9a70a143-6a71-4701-b691-db96686adc47",
+		"title" : "Bolo de Fubá",
+		"description" : "Peneirar os secos numa tigela e reservar. Bater os líquidos no liquidificador e juntar nos secos peneirados. Colocar em forma de anel, ou outra de sua preferência, untada e polvilhada com fubá. Forno aproximadamente 30 a 40 minutos.",
+		"created_at" : 1601475016555
+	}
+]
