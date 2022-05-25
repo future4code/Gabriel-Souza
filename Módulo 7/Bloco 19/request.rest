@@ -1,0 +1,9 @@
+### 
+POST http://localhost:3003/users
+Content-Type: application/json
+
+{
+  "name": "Gabriel Silva Souza",
+  "email": "gabriel_s_s@gmail.com",
+  "password": "1234567kkas"
+}
