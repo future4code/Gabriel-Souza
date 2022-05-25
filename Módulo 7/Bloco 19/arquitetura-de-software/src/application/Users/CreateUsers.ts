@@ -1,4 +1,4 @@
-import { CreateUserRepository } from "../../repositories/create-user-repository";
+import { CreateUserRepository } from "../../repositories/user-repository";
 import { CustomError } from "../../customError/CustomError";
 
 import { v4 as uuid } from 'uuid';
@@ -12,12 +12,10 @@ interface CreateUsersCases {
   password: string;
 };
 
-const j = new Error()
-
 export class CasesCreateUsers {
 
   constructor ( 
-    private createUserRepository: CreateUserRepository
+    private createUserRepository: CreateUserRepository,
    ){};
 
    public async execute( request: CreateUsersCases ){
@@ -48,6 +46,13 @@ export class CasesCreateUsers {
 
     if ( password.length < 8 || password.length > 200 ) {
       throw new CustomError("A sua senha deve ter no minímo 8 caracteres!", 400)
+    };
+
+    const emailExists =  await this.createUserRepository.verifyEmailExists(email);
+    const emailVerify = emailExists.find(( findEmail ) => findEmail.email === email);
+
+    if ( emailVerify ){
+      throw new CustomError(`Esse email: "${email}". Já possui um cadastro!. Por favor tente outro email.`, 409);
     };
 
     await this.createUserRepository.create({
