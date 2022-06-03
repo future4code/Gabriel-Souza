@@ -12,7 +12,7 @@ import {
   CheckSpacePassword,
   CheckQuantitiesCharactersPassword,
   CheckName
-} from "../../Erros/CadasterUsersErros/CadasterUsersErros";
+} from "../../Erros/UserErros/CadasterUsersErros";
 
 import { generateId } from "../../services/generateId";
 

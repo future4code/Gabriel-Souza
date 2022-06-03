@@ -27,6 +27,6 @@ export const cadasterUsersController = async ( req: Request, res: Response ): Pr
     if ( error instanceof CustomError ) {
       return res.status(error.statusCode).send(error.message);
     };
-    return res.status(500).send(error || error.sqlMessage);
+    return res.status(500).send(error.message || error.sqlMessage);
   };
 };

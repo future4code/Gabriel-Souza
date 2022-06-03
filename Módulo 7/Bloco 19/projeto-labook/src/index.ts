@@ -1,5 +1,7 @@
 import { app } from "./server";
 
-import { usersRoute } from "./routes/CadasterUsersRoutes/cadasterUsersRoutes";
+import { userRoutes } from "./routes/userRoutes/userRoutes";
+import { postRoutes } from "./routes/postRoutes/postRoutes";
 
-app.use("/user", usersRoute);
+app.use("/user", userRoutes);
+app.use("/post", postRoutes);

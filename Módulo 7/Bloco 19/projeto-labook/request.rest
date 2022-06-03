@@ -1,3 +1,5 @@
+// ================== USERS ======================
+
 ###
  POST http://localhost:3003/user/cadaster
 Content-Type: application/json
@@ -6,4 +8,16 @@ Content-Type: application/json
   "name": "Gabriel Silva. 1° Teste",
   "email": "olaa@gmail.com",
   "password": "123456789"
+}
+
+// ================== POSTS ====================
+
+###
+ POST http://localhost:3003/post/create
+Content-Type: application/json
+
+{
+   "photo": "https://tse1.mm.bing.net/th?id=OIP.lACKRmn9T4et6F_IpB4dawHaFE&pid=Api&P=0&w=232&h=158",
+  "description": "teste",
+  "authorId": "38f4e0df-ec7e-4c25-93f5-34a8e1231115"
 }
