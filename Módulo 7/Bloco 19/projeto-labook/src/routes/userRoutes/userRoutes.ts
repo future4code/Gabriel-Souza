@@ -1,6 +1,6 @@
 import express from "express";
 
-import { cadasterUsersController } from "../../controllers/cadasterUserController/cadasterUserController";
+import { cadasterUsersController } from "../../controllers/usersControllers/cadasterUserController";
 
 export const userRoutes = express.Router();
 

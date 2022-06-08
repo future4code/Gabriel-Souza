@@ -13,11 +13,15 @@ Content-Type: application/json
 // ================== POSTS ====================
 
 ###
+GET http://localhost:3003/post/9f3dc4f6-c027-4a05-8b32-770650465e8f
+
+###
  POST http://localhost:3003/post/create
 Content-Type: application/json
 
 {
    "photo": "https://tse1.mm.bing.net/th?id=OIP.lACKRmn9T4et6F_IpB4dawHaFE&pid=Api&P=0&w=232&h=158",
-  "description": "teste",
+  "description": "teste 2",
+  "type": "event",
   "authorId": "38f4e0df-ec7e-4c25-93f5-34a8e1231115"
 }
