@@ -1,0 +1,27 @@
+// ================== USERS ======================
+
+###
+GET http://localhost:3003/user/dianho@gmail.com
+
+###
+GET http://localhost:3003/user/profile
+Content-Type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRmMjI0ZDg0LTIxYjMtNGQ5MC1iZmMwLTkxN2RlMTY5NTM4MSIsImlhdCI6MTY1NTcyNzM2OCwiZXhwIjoxNjU1NzMwOTY4fQ.7afXXetN73wJ8Qnc0FEIceLmgQx4O_GI-FTYPfj3Yv0
+
+###
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+  "email": "dianho3@gmail.com",
+  "password": "12345"
+}
+
+###
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+  "email": "dianho3@gmail.com",
+  "passwordUser": "12345"
+}
