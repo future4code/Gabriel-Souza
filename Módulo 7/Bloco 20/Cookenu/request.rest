@@ -1,0 +1,13 @@
+// ================== USERS ======================
+
+###
+ POST http://localhost:3003/users/cadaster
+Content-Type: application/json
+
+{
+  "name": "Gabriel Teste 1",
+  "email": "gabriel_teste_1@gmail.com",
+  "password": "123456"
+}
+
+// ================== REVENUES ====================
