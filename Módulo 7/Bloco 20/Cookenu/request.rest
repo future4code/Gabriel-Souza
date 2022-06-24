@@ -1,13 +1,24 @@
 // ================== USERS ======================
 
 ###
+ POST http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+  "email": "gabriel_normal@gmail.com",
+  "password": "123456"
+}
+
+
+###
  POST http://localhost:3003/users/cadaster
 Content-Type: application/json
 
 {
-  "name": "Gabriel Teste 1",
-  "email": "gabriel_teste_1@gmail.com",
-  "password": "123456"
+  "name": "Gabriel Admin",
+  "email": "gabriel_admin@gmail.com",
+  "password": "123456",
+  "role": "admin"
 }
 
 // ================== REVENUES ====================

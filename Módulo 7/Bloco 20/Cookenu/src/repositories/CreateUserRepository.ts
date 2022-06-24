@@ -3,12 +3,13 @@ import { CreateUserModel, CreateUserModelData } from "../model/createUserModel";
 import { Database } from "../data/database/Database";
 
 export class CreateUserRepository extends Database implements CreateUserModel {
-  async create ( { id, name, email, password }: CreateUserModelData ) {
+  async create ( { id, name, email, password, role }: CreateUserModelData ) {
     await Database.connectionDatabase("Cookenu_Users").insert({
         id,
         name,
         email,
-        password
+        password,
+        role
     });
   };
 

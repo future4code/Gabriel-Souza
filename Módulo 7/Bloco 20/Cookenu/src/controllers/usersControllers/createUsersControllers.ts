@@ -3,22 +3,27 @@ import { Request, Response } from "express";
 import { CreateUserRepository } from "../../repositories/CreateUserRepository";
 import { CreateUsersCases } from "../../business/usersCases/CreateUsersCases";
 
-import { CustomError } from "../../erros/CustomError";
+import { BCryptAdapter } from "../../adapters/bcrypt/BcryptAdapter";
+
+import { CustomError } from "../../errors/CustomError";
 
 export const createUsersControllers = async ( req: Request, res: Response ): Promise<{}> => {
   try {
-    const { name, email, password } = req.body;
+    const { name, email, password, role } = req.body;
 
     const createUserRepository = new CreateUserRepository();
+    const bcryptAdapter = new BCryptAdapter();
 
     const createUsersCases = new CreateUsersCases(
-      createUserRepository
+      createUserRepository,
+      bcryptAdapter
     );
 
     await createUsersCases.createUser({
       name,
       email,
-      password
+      password,
+      role
     });
     
     return res.status(201).json({ message: `Usuário: ${name}, criado com sucesso` });
