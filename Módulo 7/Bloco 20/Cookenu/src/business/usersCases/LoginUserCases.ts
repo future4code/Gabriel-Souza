@@ -51,4 +51,4 @@ export class LoginUserCases{
 
     return jwtUser;
   };
-};
+};;
