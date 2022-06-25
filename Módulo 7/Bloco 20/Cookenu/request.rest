@@ -5,7 +5,7 @@
 Content-Type: application/json
 
 {
-  "email": "gabriel_normal@gmail.com",
+  "email": "gabriel_admin@gmail.com",
   "password": "123456"
 }
 
@@ -19,6 +19,16 @@ Content-Type: application/json
   "email": "gabriel_admin@gmail.com",
   "password": "123456",
   "role": "admin"
+}
+
+###
+ POST http://localhost:3003/users/recipes
+Content-Type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYyZmYyMDRiLTAyMDMtNGNkOC05MzFiLWVhMzMwZDIwYTYxYiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NjE1NzE5OSwiZXhwIjoxNjU2MjQzNTk5fQ.8UNxxacLn5w4e9kxFeVC7PD2ZzWQY1zD9JJOJZlxD9Q
+
+{
+  "title": "Bolo 3",
+  "description": "Ovo e maizena."
 }
 
 // ================== REVENUES ====================

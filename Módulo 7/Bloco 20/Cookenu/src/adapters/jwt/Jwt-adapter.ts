@@ -26,7 +26,7 @@ export class JwtAdapter implements IJwtAdapter {
   getTokenData ({ token }: IJwtGetTokenData) {
     const payload = jwt.verify(token, process.env.JWT_KEY as string) as IJwtAdapterAuthenticationData;
     const result = {
-      id: payload.id
+      id: payload.id,
     };
     return result;
   };

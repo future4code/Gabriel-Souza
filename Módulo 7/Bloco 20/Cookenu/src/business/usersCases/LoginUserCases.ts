@@ -7,7 +7,7 @@ import {
   VerifyInformationsRequest,
   VerifyIfPasswordUserIsTrue,
   VerifyIfExistUser
-} from "../../errors/usersErrors/LoginUserErros";
+} from "../../errors/usersErrors/LoginUserErrors";
 
 interface ILoginUserCasesRequest {
   email: string;
