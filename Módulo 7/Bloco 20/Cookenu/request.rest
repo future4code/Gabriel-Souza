@@ -21,7 +21,7 @@ Content-Type: application/json
   "role": "admin"
 }
 
-// ================== REVENUES ====================
+// ================== RECIPES ====================
 
 ###
  POST http://localhost:3003/users/recipes
@@ -29,7 +29,7 @@ Content-Type: application/json
 authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkyNzJkODI3LTM4MjktNDk5MC1iNzE3LWJjM2Y0ZTBiZDc4ZSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NjI3Mjg4NSwiZXhwIjoxNjU2MzU5Mjg1fQ.fHpu7KRjdHj_pr2WkFYBK-MDCa60bnmrjAsRDkCY5eU
 
 {
-  "title": "Bolo 4",
+  "title": "Bolo 5",
   "description": "Ovo e maizena."
 }
 
@@ -38,7 +38,7 @@ authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkyNzJkODI3LTM4Mjkt
 ###
  POST http://localhost:3003/users/fallow
 Content-Type: application/json
-authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA2MmQyYjRiLTU1NmItNGMyYy1iNzY5LTgwNGFjZTU1YzUwYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NjI3Mjk0NSwiZXhwIjoxNjU2MzU5MzQ1fQ.LpZ0BbG_2L9Hxkc_zguH83b0H7qy7RX-CTE6SkmZIww
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkyNzJkODI3LTM4MjktNDk5MC1iNzE3LWJjM2Y0ZTBiZDc4ZSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NjI3Mjg4NSwiZXhwIjoxNjU2MzU5Mjg1fQ.fHpu7KRjdHj_pr2WkFYBK-MDCa60bnmrjAsRDkCY5eU
 
 {
   "friendId": "9272d827-3829-4990-b717-bc3f4e0bd78e"

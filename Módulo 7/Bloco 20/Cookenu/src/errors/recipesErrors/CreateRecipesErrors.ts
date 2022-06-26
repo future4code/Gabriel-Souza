@@ -9,11 +9,11 @@ export class VerifyInformationsRequest extends CustomError {
   };
 };
 
-export class VerifyIfExistRecipe extends CustomError {
-  constructor (public title: string) {
-    super(
-      `Já existe uma receita criada com esse nome: ( ${title} )!.`,
-       409
-    );
-  };
-};
+// export class VerifyIfExistRecipe extends CustomError {
+//   constructor (public title: string) {
+//     super(
+//       `Já existe uma receita criada com esse nome: ( ${title} )!.`,
+//        409
+//     );
+//   };
+// };

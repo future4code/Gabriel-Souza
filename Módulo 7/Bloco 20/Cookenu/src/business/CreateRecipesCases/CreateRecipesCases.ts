@@ -3,7 +3,6 @@ import { ICreateRecipesModel } from "../../model/createRecipesModel";
 import { generateId } from "../../services/generateId";
 
 import { 
-  VerifyIfExistRecipe,
   VerifyInformationsRequest 
 } from "../../errors/recipesErrors/CreateRecipesErrors";
 
@@ -22,10 +21,6 @@ export class CreateRecipesCases {
     const { title, description, authorId } = request;
 
     if ( !title || !description || !authorId ) throw new VerifyInformationsRequest();
-
-    const [ recipe ] = await this.createRecipesModel.search(title);
-
-    if ( recipe ) throw new VerifyIfExistRecipe(title);
 
     const id = generateId();
 

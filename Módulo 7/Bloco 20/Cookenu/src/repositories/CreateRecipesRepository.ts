@@ -12,11 +12,4 @@ export class CreateRecipesRepository extends Database implements ICreateRecipesM
       author_id: data.authorId
     });
   };
-
-  async search ( title: string ) {
-    const recipe = await Database.connectionDatabase("Cookenu_Recipes")
-    .where("title", title);
-
-    return recipe;
-  };
 };
