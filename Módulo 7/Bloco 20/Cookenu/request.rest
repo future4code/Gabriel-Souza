@@ -24,10 +24,10 @@ Content-Type: application/json
 ###
  POST http://localhost:3003/users/recipes
 Content-Type: application/json
-authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYyZmYyMDRiLTAyMDMtNGNkOC05MzFiLWVhMzMwZDIwYTYxYiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NjE1NzE5OSwiZXhwIjoxNjU2MjQzNTk5fQ.8UNxxacLn5w4e9kxFeVC7PD2ZzWQY1zD9JJOJZlxD9Q
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYyZmYyMDRiLTAyMDMtNGNkOC05MzFiLWVhMzMwZDIwYTYxYiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NjI2MTQyMSwiZXhwIjoxNjU2MzQ3ODIxfQ.yfUyIt8OjB85-kS6fYSnN1ra2461sgrTiNaVMgVJDVk
 
 {
-  "title": "Bolo 3",
+  "title": "Bolo 4",
   "description": "Ovo e maizena."
 }
 

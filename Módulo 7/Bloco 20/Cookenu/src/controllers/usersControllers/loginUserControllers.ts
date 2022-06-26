@@ -23,12 +23,13 @@ export const loginUserControllers = async (req: Request, res: Response): Promise
       bCryptAdapter
     );
 
-    const tokenAndName = await loginUserCases.loginUser({
+    //* Retorna um objeto com essas informações
+    const token_name_role = await loginUserCases.loginUser({
       email,
       password
     });
 
-    return res.status(200).json(tokenAndName);
+    return res.status(200).json(token_name_role);
   } catch (error) {
     return error instanceof CustomError
     ?

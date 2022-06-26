@@ -8,6 +8,7 @@ interface IUserModelOutputData {
 
 export interface ILoginUserModelOutputData {
   name: string;
+  role: string;
   token: string;
 };
 

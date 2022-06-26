@@ -8,7 +8,7 @@ import { CustomError } from "../../errors/CustomError";
 export const createRecipesControllers = async ( req: Request, res: Response ): Promise<{}> => {
   try {
     
-    //* Token jwt
+    //* Id do usuário que veio do token na hora da autenticão. 
     const authorId = req.userId;
     const { title, description } = req.body;
 

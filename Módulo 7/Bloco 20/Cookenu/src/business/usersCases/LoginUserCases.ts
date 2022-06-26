@@ -46,6 +46,7 @@ export class LoginUserCases{
 
     const jwtUser: ILoginUserModelOutputData ={
       name,
+      role,
       token
     };
 

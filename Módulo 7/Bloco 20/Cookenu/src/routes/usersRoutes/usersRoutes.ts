@@ -8,6 +8,7 @@ import { createRecipesControllers } from "../../controllers/createRecipesControl
 
 export const usersRoutes = express.Router();
 
-usersRoutes.post("/login", loginUserControllers);
 usersRoutes.post("/cadaster", createUsersControllers);
+usersRoutes.post("/login", loginUserControllers);
+
 usersRoutes.post("/recipes", authMiddleware, createRecipesControllers);
