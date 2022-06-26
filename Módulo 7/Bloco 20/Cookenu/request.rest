@@ -15,20 +15,43 @@ Content-Type: application/json
 Content-Type: application/json
 
 {
-  "name": "Gabriel Admin",
-  "email": "gabriel_admin@gmail.com",
+  "name": "Rick",
+  "email": "rick@gmail.com",
   "password": "123456",
   "role": "admin"
 }
 
+// ================== REVENUES ====================
+
 ###
  POST http://localhost:3003/users/recipes
 Content-Type: application/json
-authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYyZmYyMDRiLTAyMDMtNGNkOC05MzFiLWVhMzMwZDIwYTYxYiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NjI2MTQyMSwiZXhwIjoxNjU2MzQ3ODIxfQ.yfUyIt8OjB85-kS6fYSnN1ra2461sgrTiNaVMgVJDVk
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkyNzJkODI3LTM4MjktNDk5MC1iNzE3LWJjM2Y0ZTBiZDc4ZSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NjI3Mjg4NSwiZXhwIjoxNjU2MzU5Mjg1fQ.fHpu7KRjdHj_pr2WkFYBK-MDCa60bnmrjAsRDkCY5eU
 
 {
   "title": "Bolo 4",
   "description": "Ovo e maizena."
 }
 
-// ================== REVENUES ====================
+// ================== FALLOW USERS ====================
+
+###
+ POST http://localhost:3003/users/fallow
+Content-Type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA2MmQyYjRiLTU1NmItNGMyYy1iNzY5LTgwNGFjZTU1YzUwYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NjI3Mjk0NSwiZXhwIjoxNjU2MzU5MzQ1fQ.LpZ0BbG_2L9Hxkc_zguH83b0H7qy7RX-CTE6SkmZIww
+
+{
+  "friendId": "9272d827-3829-4990-b717-bc3f4e0bd78e"
+}
+
+// Gabriel Admin
+// Id bb19a862-e208-48fa-afc9-482a1bfada7d
+// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJiMTlhODYyLWUyMDgtNDhmYS1hZmM5LTQ4MmExYmZhZGE3ZCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NjI3MzAyOCwiZXhwIjoxNjU2MzU5NDI4fQ.M4s1ZrCO42nXP9B1Kn4ERWVapAF9-GBo5JOJdfopMr8
+
+// Gabrie Normal
+// Id 062d2b4b-556b-4c2c-b769-804ace55c50c 
+// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA2MmQyYjRiLTU1NmItNGMyYy1iNzY5LTgwNGFjZTU1YzUwYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NjI3Mjk0NSwiZXhwIjoxNjU2MzU5MzQ1fQ.LpZ0BbG_2L9Hxkc_zguH83b0H7qy7RX-CTE6SkmZIww
+
+// Rick
+// Id 9272d827-3829-4990-b717-bc3f4e0bd78e
+// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkyNzJkODI3LTM4MjktNDk5MC1iNzE3LWJjM2Y0ZTBiZDc4ZSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NjI3Mjg4NSwiZXhwIjoxNjU2MzU5Mjg1fQ.fHpu7KRjdHj_pr2WkFYBK-MDCa60bnmrjAsRDkCY5eU

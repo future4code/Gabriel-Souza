@@ -1,4 +1,4 @@
-export interface CreateUserModelData {
+export interface ICreateUserModelData {
   id: string;
   name: string;
   email: string;
@@ -7,6 +7,6 @@ export interface CreateUserModelData {
 };
 
 export interface CreateUserModel {
-  create: ( data: CreateUserModelData ) => Promise<void>;
-  searchUser: ( email: string ) => Promise<CreateUserModelData[]>;
+  create: ( data: ICreateUserModelData ) => Promise<void>;
+  searchUser: ( email: string ) => Promise<ICreateUserModelData[]>;
 };

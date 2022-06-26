@@ -1,7 +1,7 @@
 import {  Request, Response } from "express";
 
 import { CreateRecipesRepository } from "../../repositories/CreateRecipesRepository";
-import { CreateRecipesCases } from "../../business/CreateRecipesCases/CreateRecipesCases";
+import { CreateRecipesCases } from "../../business/createRecipesCases/CreateRecipesCases";
 
 import { CustomError } from "../../errors/CustomError";
 

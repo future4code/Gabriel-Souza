@@ -18,5 +18,5 @@
    CREATE TABLE IF NOT EXISTS Cookenu_Follow_Users (
          user_id VARCHAR(255) NOT NULL,
          friend_id VARCHAR(255) NOT NULL,
-         FOREIGN KEY (user_id) REFERENCES labook_users (id)
+         FOREIGN KEY (user_id) REFERENCES Cookenu_Users (id)
    );
