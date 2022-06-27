@@ -1,0 +1,56 @@
+// ================== USERS ======================
+
+###
+ POST http://localhost:3003/users/cadaster
+Content-Type: application/json
+
+{
+  "name": "Celio",
+  "email": "celio@gmail.com",
+  "password": "123456",
+  "role": "normal"
+}
+
+###
+ POST http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+  "email": "rick@gmail.com",
+  "password": "123456"
+}
+
+// ================== RECIPES ====================
+
+###
+ POST http://localhost:3003/users/recipes
+Content-Type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwZDhlYWNlLWUwYjktNDA3My05NWI3LTg3NzNlZTdjNjcyMiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NjI5MDk2NywiZXhwIjoxNjU2Mzc3MzY3fQ.QHYG0JfOzH8OB4T3MfAifNunXfyV7X04xCRmUmy3sQM
+
+{
+  "title": "Bolo 5",
+  "description": "Ovo e maizena."
+}
+
+// ================== FALLOW USERS ====================
+
+###
+ POST http://localhost:3003/users/fallow
+Content-Type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwZDhlYWNlLWUwYjktNDA3My05NWI3LTg3NzNlZTdjNjcyMiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NjI4OTIxMiwiZXhwIjoxNjU2Mzc1NjEyfQ.NBSQAO0VB4ix9f_gWEjaBV1E5bN94OudhsmwSah7tSA
+
+{
+  "friendId": "8c1f9ef5-bff6-4058-a4f6-a162c739876b"
+}
+
+// Gabriel
+// Id 4fe185a7-e582-4dc3-8d9d-f050e2263bea
+// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRmZTE4NWE3LWU1ODItNGRjMy04ZDlkLWYwNTBlMjI2M2JlYSIsInJvbGUiOiJub3JtYWwiLCJpYXQiOjE2NTYyODkxNDcsImV4cCI6MTY1NjM3NTU0N30.Nqw4CMCZkifNxsuh_uVPuGpR1p5ES68HWMX1IFVgB6g
+
+// Celio
+// Id 8c1f9ef5-bff6-4058-a4f6-a162c739876b
+// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhjMWY5ZWY1LWJmZjYtNDA1OC1hNGY2LWExNjJjNzM5ODc2YiIsInJvbGUiOiJub3JtYWwiLCJpYXQiOjE2NTYyODkxNzgsImV4cCI6MTY1NjM3NTU3OH0.aOr47tJR3FKJNb5pZe23iB2rNVtcPckRBGwYCTsyqus
+
+// Rick
+// Id 10d8eace-e0b9-4073-95b7-8773ee7c6722
+// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwZDhlYWNlLWUwYjktNDA3My05NWI3LTg3NzNlZTdjNjcyMiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NjI4OTIxMiwiZXhwIjoxNjU2Mzc1NjEyfQ.NBSQAO0VB4ix9f_gWEjaBV1E5bN94OudhsmwSah7tSA
