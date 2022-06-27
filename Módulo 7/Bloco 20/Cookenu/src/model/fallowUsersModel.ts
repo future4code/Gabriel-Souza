@@ -23,5 +23,6 @@ export interface IOutputModelFriendData {
 
 export interface IFallowUsersModel {
   fallow: ( data: IFallowUsersModelData ) => Promise<void>;
-  searchFriend: ( idFriend: string ) => Promise<IOutputModelFriendData[]>;
+  searchFriend: ( userId: string, friendId: string ) => Promise<IOutputSearchFriendData>;
+  findYourself: ( friendId: string ) => Promise<IOutputSearchFriendData>;
 };

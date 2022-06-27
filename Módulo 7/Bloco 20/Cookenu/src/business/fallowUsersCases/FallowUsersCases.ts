@@ -1,5 +1,10 @@
 import { IFallowUsersModel } from "../../model/fallowUsersModel";
 
+import {
+   CheckIfThereIsFollower,
+   VerifyInformationsRequest
+  } from "../../errors/fallowUsersErrors/FallowUsersErrors";
+
 interface IFallowUsersCasesRequest {
   userId: string;
   friendId: string;
@@ -12,13 +17,19 @@ export class FallowUsersCases {
 
   async fallowUser ( { userId, friendId }: IFallowUsersCasesRequest) {
 
-    const [ friend ] = await this.fallowUsersModel.searchFriend(friendId);
+    if (  !userId || !friendId ) throw new VerifyInformationsRequest();
 
-    if ( friend ) throw new Error("Conflito");
+    const friend = await this.fallowUsersModel.searchFriend(userId, friendId);
+    const you = await this.fallowUsersModel.findYourself(friendId)
+    // console.log(you)
+
+    if ( friend ) throw new CheckIfThereIsFollower();
 
     await this.fallowUsersModel.fallow({
       userId,
       friendId
     });
+
+    return you;
   };
 };

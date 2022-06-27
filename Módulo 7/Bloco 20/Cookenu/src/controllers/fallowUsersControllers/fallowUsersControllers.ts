@@ -16,12 +16,17 @@ export const fallowUsersControllers = async ( req: Request, res: Response ): Pro
       fallowUsersRepository
     );
 
-    await fallowUsersCases.fallowUser({
+    //* Retorna 1 usuário ou underfined
+    const result = await fallowUsersCases.fallowUser({
       userId,
       friendId
     });
     
-    return res.status(200).json({message: "Certo"});
+    if ( result ) {
+      return res.status(200).json({message: `Parabéns, você e ${result.name}, estão seguindo um ao outro.`});
+    }
+    
+    return res.status(200).json({message: `Agora você agora esta seguindo essa pessoa.`});
   } catch (error) {
     return error instanceof CustomError
     ?

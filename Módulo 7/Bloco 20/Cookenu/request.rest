@@ -1,24 +1,23 @@
 // ================== USERS ======================
 
 ###
- POST http://localhost:3003/users/login
-Content-Type: application/json
-
-{
-  "email": "gabriel_admin@gmail.com",
-  "password": "123456"
-}
-
-
-###
  POST http://localhost:3003/users/cadaster
 Content-Type: application/json
 
 {
-  "name": "Rick",
-  "email": "rick@gmail.com",
+  "name": "Celio",
+  "email": "celio@gmail.com",
   "password": "123456",
-  "role": "admin"
+  "role": "normal"
+}
+
+###
+ POST http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+  "email": "rick@gmail.com",
+  "password": "123456"
 }
 
 // ================== RECIPES ====================
@@ -26,7 +25,7 @@ Content-Type: application/json
 ###
  POST http://localhost:3003/users/recipes
 Content-Type: application/json
-authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkyNzJkODI3LTM4MjktNDk5MC1iNzE3LWJjM2Y0ZTBiZDc4ZSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NjI3Mjg4NSwiZXhwIjoxNjU2MzU5Mjg1fQ.fHpu7KRjdHj_pr2WkFYBK-MDCa60bnmrjAsRDkCY5eU
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwZDhlYWNlLWUwYjktNDA3My05NWI3LTg3NzNlZTdjNjcyMiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NjI5MDk2NywiZXhwIjoxNjU2Mzc3MzY3fQ.QHYG0JfOzH8OB4T3MfAifNunXfyV7X04xCRmUmy3sQM
 
 {
   "title": "Bolo 5",
@@ -38,20 +37,20 @@ authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkyNzJkODI3LTM4Mjkt
 ###
  POST http://localhost:3003/users/fallow
 Content-Type: application/json
-authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkyNzJkODI3LTM4MjktNDk5MC1iNzE3LWJjM2Y0ZTBiZDc4ZSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NjI3Mjg4NSwiZXhwIjoxNjU2MzU5Mjg1fQ.fHpu7KRjdHj_pr2WkFYBK-MDCa60bnmrjAsRDkCY5eU
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwZDhlYWNlLWUwYjktNDA3My05NWI3LTg3NzNlZTdjNjcyMiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NjI4OTIxMiwiZXhwIjoxNjU2Mzc1NjEyfQ.NBSQAO0VB4ix9f_gWEjaBV1E5bN94OudhsmwSah7tSA
 
 {
-  "friendId": "9272d827-3829-4990-b717-bc3f4e0bd78e"
+  "friendId": "8c1f9ef5-bff6-4058-a4f6-a162c739876b"
 }
 
-// Gabriel Admin
-// Id bb19a862-e208-48fa-afc9-482a1bfada7d
-// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJiMTlhODYyLWUyMDgtNDhmYS1hZmM5LTQ4MmExYmZhZGE3ZCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NjI3MzAyOCwiZXhwIjoxNjU2MzU5NDI4fQ.M4s1ZrCO42nXP9B1Kn4ERWVapAF9-GBo5JOJdfopMr8
+// Gabriel
+// Id 4fe185a7-e582-4dc3-8d9d-f050e2263bea
+// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRmZTE4NWE3LWU1ODItNGRjMy04ZDlkLWYwNTBlMjI2M2JlYSIsInJvbGUiOiJub3JtYWwiLCJpYXQiOjE2NTYyODkxNDcsImV4cCI6MTY1NjM3NTU0N30.Nqw4CMCZkifNxsuh_uVPuGpR1p5ES68HWMX1IFVgB6g
 
-// Gabrie Normal
-// Id 062d2b4b-556b-4c2c-b769-804ace55c50c 
-// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA2MmQyYjRiLTU1NmItNGMyYy1iNzY5LTgwNGFjZTU1YzUwYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NjI3Mjk0NSwiZXhwIjoxNjU2MzU5MzQ1fQ.LpZ0BbG_2L9Hxkc_zguH83b0H7qy7RX-CTE6SkmZIww
+// Celio
+// Id 8c1f9ef5-bff6-4058-a4f6-a162c739876b
+// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhjMWY5ZWY1LWJmZjYtNDA1OC1hNGY2LWExNjJjNzM5ODc2YiIsInJvbGUiOiJub3JtYWwiLCJpYXQiOjE2NTYyODkxNzgsImV4cCI6MTY1NjM3NTU3OH0.aOr47tJR3FKJNb5pZe23iB2rNVtcPckRBGwYCTsyqus
 
 // Rick
-// Id 9272d827-3829-4990-b717-bc3f4e0bd78e
-// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkyNzJkODI3LTM4MjktNDk5MC1iNzE3LWJjM2Y0ZTBiZDc4ZSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NjI3Mjg4NSwiZXhwIjoxNjU2MzU5Mjg1fQ.fHpu7KRjdHj_pr2WkFYBK-MDCa60bnmrjAsRDkCY5eU
+// Id 10d8eace-e0b9-4073-95b7-8773ee7c6722
+// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwZDhlYWNlLWUwYjktNDA3My05NWI3LTg3NzNlZTdjNjcyMiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NjI4OTIxMiwiZXhwIjoxNjU2Mzc1NjEyfQ.NBSQAO0VB4ix9f_gWEjaBV1E5bN94OudhsmwSah7tSA
