@@ -21,13 +21,15 @@
       "knex": "^0.21.5",
       "lodash": "^4.17.21",
       "mysql": "^2.18.1",
+      "nodemailer": "^6.7.5",
       "uuid": "^8.3.0"
    },
    "devDependencies": {
+      "@types/nodemailer": "^6.4.4",
       "@types/bcryptjs": "^2.4.2",
-      "@types/jsonwebtoken": "^8.5.8",
       "@types/cors": "^2.8.7",
       "@types/express": "^4.17.8",
+      "@types/jsonwebtoken": "^8.5.8",
       "@types/knex": "^0.16.1",
       "@types/lodash": "^4.14.182",
       "@types/node": "^14.11.2",

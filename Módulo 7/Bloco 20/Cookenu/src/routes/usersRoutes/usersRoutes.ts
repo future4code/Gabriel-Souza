@@ -6,6 +6,7 @@ import { loginUserControllers } from "../../controllers/usersControllers/loginUs
 import { createUsersControllers } from "../../controllers/usersControllers/createUsersControllers";
 import { createRecipesControllers } from "../../controllers/createRecipesControllers/createRecipesControllers";
 import { fallowUsersControllers } from "../../controllers/fallowUsersControllers/fallowUsersControllers";
+import { updatePasswordControllers } from "../../controllers/updatePasswordControllers/updatePasswordControllers";
 
 export const usersRoutes = express.Router();
 
@@ -15,3 +16,5 @@ usersRoutes.post("/login", loginUserControllers);
 //* Rotas que necessitam de autenticação 
 usersRoutes.post("/recipes", authMiddleware, createRecipesControllers);
 usersRoutes.post("/fallow", authMiddleware, fallowUsersControllers);
+
+usersRoutes.patch("/password", authMiddleware, updatePasswordControllers);

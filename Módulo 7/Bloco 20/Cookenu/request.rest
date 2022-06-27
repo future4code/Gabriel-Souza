@@ -5,10 +5,10 @@
 Content-Type: application/json
 
 {
-  "name": "Celio",
-  "email": "celio@gmail.com",
+  "name": "Gabriel Email Teste",
+  "email": "gabriel127.gk@gmail.com",
   "password": "123456",
-  "role": "normal"
+  "role": "admin"
 }
 
 ###
@@ -16,7 +16,7 @@ Content-Type: application/json
 Content-Type: application/json
 
 {
-  "email": "rick@gmail.com",
+  "email": "gabriel@gmail.com",
   "password": "123456"
 }
 
@@ -42,6 +42,13 @@ authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwZDhlYWNlLWUwYjkt
 {
   "friendId": "8c1f9ef5-bff6-4058-a4f6-a162c739876b"
 }
+
+// =================== UPDATE PASSWORD ==========================
+
+###
+PATCH http://localhost:3003/users/password
+Content-Type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRmZTE4NWE3LWU1ODItNGRjMy04ZDlkLWYwNTBlMjI2M2JlYSIsInJvbGUiOiJub3JtYWwiLCJpYXQiOjE2NTYzNDI1NjQsImV4cCI6MTY1NjQyODk2NH0.ghiZKsg2kfPbI90FCnfoBwirmy0kJu61LZqqNAiGHF4
 
 // Gabriel
 // Id 4fe185a7-e582-4dc3-8d9d-f050e2263bea
