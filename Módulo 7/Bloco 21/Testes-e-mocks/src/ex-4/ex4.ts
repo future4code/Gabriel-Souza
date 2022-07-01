@@ -1,0 +1,1 @@
+//* Da funcão validateCharacter. Por que e a que esta vindo como depêndecia.  
