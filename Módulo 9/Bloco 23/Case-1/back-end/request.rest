@@ -1,0 +1,35 @@
+// ================== ProductsTest ======================
+
+//* Buscar Produtos
+###
+ GET http://localhost:3333/products/all
+ # FILME DE PVC WYDA 28CMX15M
+ # all?price=max
+// ================== Purchase Test ======================
+
+//* Buscar Compras Efetuadas
+###
+ GET https://git.heroku.com/my-product-management.git/purchase/all
+ #price=min
+ #name=GUARDANAPO FOLHA DUPLA SNOB 23
+
+//Comprar Produto
+###
+ POST http://localhost:3333/purchase/0bba3bb6-e8eb-11ec-9999-42010a80007c
+Content-Type: application/json
+
+{
+  "chosenQuantity": 35,
+  "scheduledDate": "23/02/2025"
+}
+
+###
+ PUT http://localhost:3333/purchase/513984e1-a00c-4633-9cf4-ccefc39aed70
+Content-Type: application/json
+
+{
+  "newQuantity": 1
+}
+
+###
+ DELETE  http://localhost:3333/purchase/aa2d1baf-aca7-4c25-b2e1-8313559ed59a
