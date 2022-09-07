@@ -1,13 +1,13 @@
-import { ContextGlobalComponent } from "./contexts/contextGlobal";
+import { ContextGlobalComponent } from "./shared/contexts/contextGlobal";
 import { Routers } from "./routes/index";
 
-import { GlobalStyles } from "./styles/GlobalStyles";
+import { GlobalStyles } from "./shared/styles/GlobalStyles";
 
 function App() {
   return (
     <ContextGlobalComponent>
-     <Routers />
-     <GlobalStyles />
+      <Routers />
+      <GlobalStyles />
     </ContextGlobalComponent>
   );
 };
