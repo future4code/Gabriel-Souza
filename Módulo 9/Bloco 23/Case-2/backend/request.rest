@@ -1,0 +1,51 @@
+// Class =========================================================
+
+### 
+GET http://localhost:3333/class/all
+
+###
+GET http://localhost:3333/class/Classe 1
+
+###
+POST http://localhost:3333/class/create
+Content-Type: application/json
+
+{
+  "nameClass": "Classe 3",
+  "responsible": "Gabriel"
+}
+
+###
+DELETE http://localhost:3333/class/Ramos
+
+// ================================================================
+
+// Students =======================================================
+
+###
+GET http://localhost:3333/students/445886e9-13de-4e7b-a600-cad5087b05de
+
+###
+POST http://localhost:3333/students/Classe 3
+Content-Type: application/json
+
+{
+  "firstName": "Test 1",
+  "lastName": "Test 2",
+  "participation": 1
+}
+
+###
+PUT http://localhost:3333/students/Classe 3/3feef23a-ce3d-409b-ad0e-1024316de7dc
+Content-Type: application/json
+
+{
+  "firstName": "Test 3",
+  "lastName": "Test 33",
+  "participation": 10
+}
+
+###
+DELETE http://localhost:3333/students/Classe 3/3feef23a-ce3d-409b-ad0e-1024316de7dc
+
+// ================================================================
